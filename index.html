@@ -91,15 +91,20 @@
 Чем больше информации – тем результативнее будет наша работа!<br>
 ФИО предка		(Другие Варианты Инициалов – попадает в дополнительную информацию, если заполнено)<br>
 <br>
-	&nbsp<input type=radio name = live value=1 >
+	&nbsp<input type=radio name = live value=1  onclick="l();">
 	жив	
-	&nbsp<input type=radio name = live value=0 >
+	&nbsp<input type=radio name = live value=0 onclick="no_l();">
 	мертв
 <br>
 <br>
 Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
 
 <table>
+<tr>
+<td>
+<td>
+<td>
+<b>Неточная<br> информация</b>
 <tr>
 <td>
 Дата рождения               
@@ -110,14 +115,34 @@
 <tr>
 <td>
 Место рождения 
-<input type=text name = mama[mesto_r]>
+<td>
+<input type=text name = rod[mama][mesto_r][value]>
+<td>
+<input type=checkbox name = rod[mama][mesto_r][netochno]>
+<tr>
+<td>
 ФИО супруга(и)
+<td>
+<input type=text name = rod[mama][suprug][value]>
+<td>
+<input type=checkbox name = rod[mama][suprug][netochno]>
+<tr>
+<td>
 Дата вступления в брак
+<td>
+<input type=text name = rod[mama][data_b][value]>
+<td>
+<input type=checkbox name = rod[mama][data_b][netochno]>
+<tr>
+<td>
 Место вступления в брак
-Дата смерти (если стоит галочка)
-Место смерти(если стоит галочка)
-
+<td>
+<input type=text name = rod[mama][mesto_b][value]>
+<td>
+<input type=checkbox name = rod[mama][mesto_b][netochno]>
 </table>
+
+<div class = die id = die></div>
 
 <p>
 <input type=submit value = Отпправить>
@@ -183,6 +208,19 @@
 		var html = '';
 		document.getElementById('mama').innerHTML=html; 
 	}
+
+	function no_l()
+	{
+		var html = ' <table><tr> <td> Дата смерти <td> <input type=text name = rod[mama][data_s][value]> <td> <input type=checkbox name = rod[mama][data_s][netochno]> <tr> <td> Место смерти&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td> <input type=text name = rod[mama][mesto_s][value]> <td> <input type=checkbox name = rod[mama][mesto_s][netochno]> </table>';
+		document.getElementById('die').innerHTML=html; 
+}
+
+	function l()
+	{
+		var html = '';
+		document.getElementById('die').innerHTML=html; 
+	}
+
 
 
 
