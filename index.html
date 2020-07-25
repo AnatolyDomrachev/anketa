@@ -1,5 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+<style>
+	   table {
+	    border-spacing: 17px 11px; /* Расстояние между ячейками */
+	   }
+	   td {
+	    padding: 5px; /* Поля вокруг текста */
+	   }
+  </style>
   <head>
   <meta charset="utf-8">
   </head>
@@ -37,12 +45,84 @@
 		&nbsp<input type=radio name = evac value=0 onclick="no_e();" > нет
 		<div class = evac id = evac></div>
 	<p>
-	Был ли на фронте да/нет (если да, то где и в какой части)
+	Был ли на фронте да/нет 
 		&nbsp<input type=radio name = front value=1 onclick="f();" > да
 		&nbsp<input type=radio name = front value=0 onclick="no_f();"  > нет
 		<div class = front id = front></div>
 		<p>
-	  </form>
+
+<b>Укажите родственников по еврейской линии:</b><p>
+
+<table>
+<tr>
+<td>
+Мама 
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+папа
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+дедушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+дедушка по папе
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<tr>
+<td>
+бабушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+бабушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+прабабушка по материнской линии 
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+другое
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+</table>
+<p>
+<!--Каждая галочка создает соответствующий блок в анкете. 
+«Другое» создает отдельный блок со свободным текстовым блоком --!>
+
+		<div class = mama id = mama></div>
+
+		<b>ПРЕДОК 1 (в зависимости от галочки в соответствующей очередности)<br></b>
+Чем больше информации – тем результативнее будет наша работа!<br>
+ФИО предка		(Другие Варианты Инициалов – попадает в дополнительную информацию, если заполнено)<br>
+<br>
+	&nbsp<input type=radio name = live value=1 >
+	жив	
+	&nbsp<input type=radio name = live value=0 >
+	мертв
+<br>
+<br>
+Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
+
+<table>
+<tr>
+<td>
+Дата рождения               
+<td>
+<input type=text name = rod[mama][data_r][value]>
+<td>
+<input type=checkbox name = rod[mama][data_r][netochno]>
+<tr>
+<td>
+Место рождения 
+<input type=text name = mama[mesto_r]>
+ФИО супруга(и)
+Дата вступления в брак
+Место вступления в брак
+Дата смерти (если стоит галочка)
+Место смерти(если стоит галочка)
+
+</table>
+
+<p>
+<input type=submit value = Отпправить>
+</form>
+
 
 <script type="text/javascript">
 
@@ -82,6 +162,29 @@
 		var html = '';
 		document.getElementById('front').innerHTML=html; 
 	}
+
+	function m()
+	{
+	var chbox;
+	chbox=document.getElementById('id_mama');
+		if (chbox.checked) {
+			var html = 'Где&nbsp<input type=text name = f_gde>&nbsp В какой части<input type=text name = f_chast>';
+			document.getElementById('mama').innerHTML=html; 
+		}
+		else {
+			var html = '';
+			document.getElementById('mama').innerHTML=html; 
+		}
+
+	}
+
+	function no_m()
+	{
+		var html = '';
+		document.getElementById('mama').innerHTML=html; 
+	}
+
+
 
 
 </script>
