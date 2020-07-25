@@ -7,7 +7,8 @@
 
 <script type="text/javascript" src="jquery.min.js"></script>
 
-Анкета генеалогического исследования<br>
+<h2>Анкета генеалогического исследования</h2>
+<p>
 Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль. Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p>
 
 <form method=post action=add.php>
@@ -15,12 +16,21 @@
 	Дата рождения&nbsp<input type=text name = data_r><p>
 	Место рождения&nbsp<input type=text name = mesto_r><p>
 	Супруг/а
-		&nbsp<input type=radio name = suprug value=yes onclick="s();" > да
-		&nbsp<input type=radio name = suprug value=yes > нет
+		&nbsp<input type=radio name = suprug value=1 onclick="s();" > да
+		&nbsp<input type=radio name = suprug value=0 > нет
 		<br>
 
 		<div class = suprug id = suprug></div>
 		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
+	  <p><b>Информация о супруге</b>
+	Инициалы&nbsp<input type=text name = inicialy><p>
+	Дата рождения&nbsp<input type=text name = data_r><p>
+	Место рождения&nbsp<input type=text name = mesto_r><p>
+	Место брака&nbsp<input type=text name = mesto_b><p>
+	Есть ли еврейские корни
+		&nbsp<input type=radio name = korni value=1 > да
+		&nbsp<input type=radio name = korni value=0 > нет
+		<br>
 
 	  </form>
 
