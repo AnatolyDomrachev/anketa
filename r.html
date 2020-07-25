@@ -1,0 +1,25 @@
+<h2>Testing radio functionality</h2>
+<script type="text/javascript">var radioArray=[null];</script>
+<input name="juju" value="button1" type="radio" onclick="radioChange('juju','button1',radioArray);" />Button 1
+<input name="juju" value="button2" type="radio" onclick="radioChange('juju','button2',radioArray);" />Button 2
+<input name="juju" value="button3" type="radio" onclick="radioChange('juju','button3',radioArray);" />Button 3
+<br />
+
+<script type="text/javascript">
+function radioChange(radioSet,radioButton,radioArray)
+  {
+  //if(radioArray instanceof Array) {alert('Array Passed');}
+  var oldButton=radioArray[0];
+  if(radioArray[0] == null)
+    {
+    alert('Old button was not defined');
+    radioArray[0]=radioButton;
+    }
+  else
+    {
+    alert('Old button was set to ' + oldButton);
+    radioArray[0]=radioButton;
+    }
+  alert('New button is set to ' + radioArray[0]);
+  }
+</script>

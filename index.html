@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+  <meta charset="utf-8">
+  </head>
+  <body>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+Анкета генеалогического исследования<br>
+Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль. Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p>
+
+<form method=post action=add.php>
+	Ваши инициалы&nbsp<input type=text name = inicialy><p>
+	Дата рождения&nbsp<input type=text name = data_r><p>
+	Место рождения&nbsp<input type=text name = mesto_r><p>
+	Супруг/а
+		&nbsp<input type=radio name = suprug value=yes onclick="s();" > да
+		&nbsp<input type=radio name = suprug value=yes > нет
+		<br>
+
+		<div class = suprug id = suprug></div>
+		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
+
+	  </form>
+
+<script type="text/javascript">
+
+
+	function s()
+	{
+		var html = 'Test';
+		document.getElementById('suprug').innerHTML=html; 
+	}
+
+</script>
+
