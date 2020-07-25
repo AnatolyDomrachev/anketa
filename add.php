@@ -1,6 +1,6 @@
 <?php
 
-<pre>
+echo "<pre>";
 print_r($_POST);
 
 ?>
