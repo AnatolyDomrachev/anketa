@@ -1,3 +1,4 @@
+var i = 0;
 
 	function s()
 	{
@@ -95,11 +96,18 @@
 
 	function add_uch()
 	{
-		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod[mama][ucheba][1][period]> <td> <textarea name = rod[mama][ucheba][1][mesto]></textarea> <td> <input type=checkbox name = rod[mama][ucheba][1][netochno]> </table> <p> ';
-		document.getElementById('add_uch').innerHTML=html; 
+		i2 = i+1;
+		var s = 'add_uch'+i;
+		var id = 'add_uch'+i2;
+		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod[mama][ucheba]['+i+'][period]> <td> <textarea name = rod[mama][ucheba]['+i+'][mesto]></textarea> <td> <input type=checkbox name = rod[mama][ucheba]['+i+'][netochno]> </table> <p>  </div> <div class = '+ id + ' id = ' + id + '>';
+		console.log(i);
+		console.log(s);
+		console.log(id);
+		document.getElementById(s).innerHTML=html; 
+		i++;
 
-		var html1 = '';
-		document.getElementById('b_uch').innerHTML=html1; 
+		var html1 = ' <button  type="button" onclick="add_uch();">добавить еще одно место учебы</button>';
+		//document.getElementById('b_uch').innerHTML=html1; 
 	}
 
 
