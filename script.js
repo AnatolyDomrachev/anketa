@@ -1,4 +1,5 @@
 var i = 0;
+var j = 0;
 
 	function s()
 	{
@@ -36,13 +37,36 @@ var i = 0;
 		document.getElementById('front').innerHTML=html; 
 	}
 
+
+	function ftc(fname, id)
+{
+	fetch(fname)
+    .then(function (response) {
+        switch (response.status) {
+            // status "OK"
+            case 200:
+                return response.text();
+            // status "Not Found"
+            case 404:
+                throw response;
+        }
+    })
+    .then(function (template) {
+        console.log(template);
+	document.getElementById(id).innerHTML=template; 
+    })
+    .catch(function (response) {
+        // "Not Found"
+        console.log(response.statusText);
+    });
+}
+
 	function m()
 	{
 	var chbox;
 	chbox=document.getElementById('id_mama');
 		if (chbox.checked) {
-			var html = 'Где&nbsp<input type=text name = f_gde>&nbsp В какой части<input type=text name = f_chast>';
-			document.getElementById('mama').innerHTML=html; 
+			ftc('mama.html', 'mama');
 		}
 		else {
 			var html = '';
@@ -106,8 +130,20 @@ var i = 0;
 		document.getElementById(s).innerHTML=html; 
 		i++;
 
-		var html1 = ' <button  type="button" onclick="add_uch();">добавить еще одно место учебы</button>';
-		//document.getElementById('b_uch').innerHTML=html1; 
+	}
+
+	function add_rab()
+	{
+		var j2 = j+1;
+		var s = 'add_rab'+j;
+		var id = 'add_rab'+j2;
+		var html = ' <p> <table border = 1> <tr> <td> Период работы <td> Должность <td> Название предприятия <br>(учреждения, организации) <td> Не точно <tr> <td> <input type=text name = rod[mama][rabota]['+j+'][period]> <td> <textarea name = rod[mama][rabota]['+j+'][dolzhnost]></textarea> <td> <textarea name = rod[mama][rabota]['+j+'][mesto]></textarea> <td> <input type=checkbox name = rod[mama][rabota]['+j+'][netochno]> </table> <p></div>  <div class = '+id+' id = '+id+' >';
+		console.log(j);
+		console.log(s);
+		console.log(id);
+		document.getElementById(s).innerHTML=html; 
+		j++;
+
 	}
 
 
