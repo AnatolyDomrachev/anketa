@@ -1,5 +1,6 @@
 var i = 0;
 var j = 0;
+var k = 0;
 
 	function s()
 	{
@@ -143,6 +144,20 @@ var j = 0;
 		console.log(id);
 		document.getElementById(s).innerHTML=html; 
 		j++;
+
+	}
+
+	function add_adr()
+	{
+		var k2 = k+1;
+		var s = 'add_adr'+k;
+		var id = 'add_adr'+k2;
+		var html = ' <p> <table border = 1> <tr> <td> Город <td> район <td> улица <td> дом <td> корпус <td> квартира <td> период <td> Не точно <tr> <td> <input type=text name = rod[mama][adres]['+k+'][gorod]> <td> <input type=text  name = rod[mama][adres]['+k+'][raion]> <td> <input type=text name = rod[mama][adres]['+k+'][ulica]> <td> <input type=text name = rod[mama][adres]['+k+'][dom]> <td> <input type=text name = rod[mama][adres]['+k+'][korpus]> <td> <input type=text name = rod[mama][adres]['+k+'][kv]> <td> <input type=text name = rod[mama][adres]['+k+'][period]> <td> <input type=checkbox name = rod[mama][adres]['+k+'][netochno]> </table> <p> </div> <div class = '+id+' id = '+id+' > ';
+		console.log(k);
+		console.log(s);
+		console.log(id);
+		document.getElementById(s).innerHTML=html; 
+		k++;
 
 	}
 
