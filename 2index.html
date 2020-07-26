@@ -1,0 +1,242 @@
+</div>
+<h2>Анкета генеалогического исследования</h2>
+<p>
+<b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
+
+<form method=post action=add.php>
+	Ваши инициалы&nbsp<input type=text name = inicialy><p>
+	Дата рождения&nbsp<input type=text name = data_r><p>
+	Место рождения&nbsp<input type=text name = mesto_r><p>
+	Супруг/а
+		&nbsp<input type=radio name = suprug value=1 onclick="s();" > да
+		&nbsp<input type=radio name = suprug value=0 onclick="no_s();" > нет
+		<br>
+
+		<div class = suprug id = suprug></div>
+		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
+	 	Есть ли еврейские корни
+		&nbsp<input type=radio name = korni value=1 > да
+		&nbsp<input type=radio name = korni value=0 > нет
+		<p>
+
+		<b>Дополнительная информация:</b><p>
+	Партийный да/нет
+		&nbsp<input type=radio name = part value=1 > да
+		&nbsp<input type=radio name = part value=0 > нет
+		<p>
+	Был ли в эвакуации 
+		&nbsp<input type=radio name = evac value=1 onclick="e();" > да
+		&nbsp<input type=radio name = evac value=0 onclick="no_e();" > нет
+		<div class = evac id = evac></div>
+	<p>
+	Был ли на фронте да/нет 
+		&nbsp<input type=radio name = front value=1 onclick="f();" > да
+		&nbsp<input type=radio name = front value=0 onclick="no_f();"  > нет
+		<div class = front id = front></div>
+		<p>
+
+<b>Укажите родственников по еврейской линии:</b><p>
+
+<table>
+<tr>
+<td>
+Мама 
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+папа
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+дедушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+дедушка по папе
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<tr>
+<td>
+бабушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+бабушка по маме
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+прабабушка по материнской линии 
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+<td>
+другое
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+</table>
+<p>
+<!--Каждая галочка создает соответствующий блок в анкете. 
+«Другое» создает отдельный блок со свободным текстовым блоком --!>
+
+		<div class = mama id = mama></div>
+
+		<b>ПРЕДОК 1 (в зависимости от галочки в соответствующей очередности)<br></b>
+Чем больше информации – тем результативнее будет наша работа!<br>
+ФИО предка		(Другие Варианты Инициалов – попадает в дополнительную информацию, если заполнено)<br>
+<br>
+	&nbsp<input type=radio name = live value=1  onclick="l();">
+	жив	
+	&nbsp<input type=radio name = live value=0 onclick="no_l();">
+	мертв
+<br>
+<br>
+Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
+
+<table>
+<tr>
+<td>
+<td>
+<td>
+<b>Неточная<br> информация</b>
+<tr>
+<td>
+Дата рождения               
+<td>
+<input type=text name = rod[mama][data_r][value]>
+<td>
+<input type=checkbox name = rod[mama][data_r][netochno]>
+<tr>
+<td>
+Место рождения 
+<td>
+<input type=text name = rod[mama][mesto_r][value]>
+<td>
+<input type=checkbox name = rod[mama][mesto_r][netochno]>
+<tr>
+<td>
+ФИО супруга(и)
+<td>
+<input type=text name = rod[mama][suprug][value]>
+<td>
+<input type=checkbox name = rod[mama][suprug][netochno]>
+<tr>
+<td>
+Дата вступления в брак
+<td>
+<input type=text name = rod[mama][data_b][value]>
+<td>
+<input type=checkbox name = rod[mama][data_b][netochno]>
+<tr>
+<td>
+Место вступления в брак
+<td>
+<input type=text name = rod[mama][mesto_b][value]>
+<td>
+<input type=checkbox name = rod[mama][mesto_b][netochno]>
+</table>
+
+<div class = die id = die></div>
+
+<p>
+
+<b>
+Данные о супругах:
+</b>
+	<p>
+Первый брак
+	&nbsp
+	<input type=checkbox name = rod[mama][first_b][value]>
+	<p>
+дата рождения супруга
+	&nbsp
+	<input type=text name = rod[mama][data_r_s][value]>
+	<p>
+место рождения супруга
+	&nbsp
+	<input type=text name = rod[mama][mesto_r_s][value]>
+	<p>
+
+	<table border=1>
+	<tr>
+<td>
+Был ли членом партии
+<td>
+Был ли в эвакуации
+<td>
+Был ли на фронте
+	<tr>
+<td>
+		<input type=radio name = suprug value=1  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0 > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2 > 
+&nbsp
+	неизвестно
+
+<td>
+		<input type=radio name = suprug value=1  onclick="e_m_s();" > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0  onclick="no_e_m_s();" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2  onclick="no_e_m_s();" > 
+&nbsp
+	неизвестно
+
+		<div class = evac_m_s id = evac_m_s></div>
+
+<td>
+		<input type=radio name = suprug value=1  onclick="f_m_s();"  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0  onclick="no_f_m_s();" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2 onclick="no_f_m_s();" > 
+&nbsp
+	неизвестно
+
+		<div class = evac_m_s id = front_m_s></div>
+
+
+</table>
+
+<p>
+<b>
+МЕСТА УЧЕБЫ
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+Период учебы     
+<td>
+Название учебного заведения
+<td>
+Не точно
+<tr>
+<td>
+<input type=text name = rod[mama][ucheba][0][period]>
+<td>
+<textarea name = rod[mama][ucheba][0][mesto]></textarea>
+<td>
+<input type=checkbox name = rod[mama][ucheba][0][netochno]>
+</table>
+<p>
+
+<div class = add_uch0 id = add_uch0 ></div>
+
+<div class = b_uch id = b_uch >
+<button  type="button" onclick="add_uch();">добавить еще одно место учебы</button>
+</div>
+
+
+
+<p>
+<input type=submit value = Отпправить>
+</form>
+
+
+<script type="text/javascript" src="./script.js"></script>
+<div id = tmp>
