@@ -1,6 +1,7 @@
 var i = 0;
 var j = 0;
 var k = 0;
+var l = 0;
 
 	function s()
 	{
@@ -62,7 +63,7 @@ var k = 0;
     });
 }
 
-	function m()
+	function f_mama()
 	{
 	var chbox;
 	chbox=document.getElementById('id_mama');
@@ -75,6 +76,21 @@ var k = 0;
 		}
 
 	}
+
+	function f_papa()
+	{
+	var chbox;
+	chbox=document.getElementById('id_papa');
+		if (chbox.checked) {
+			ftc('papa.html', 'papa');
+		}
+		else {
+			var html = '';
+			document.getElementById('papa').innerHTML=html; 
+		}
+
+	}
+
 
 	function no_m()
 	{
@@ -119,12 +135,12 @@ var k = 0;
 		document.getElementById('front_m_s').innerHTML=html; 
 	}
 
-	function add_uch()
+	function add_uch(rod)
 	{
 		i2 = i+1;
-		var s = 'add_uch'+i;
-		var id = 'add_uch'+i2;
-		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod[mama][ucheba]['+i+'][period]> <td> <textarea name = rod[mama][ucheba]['+i+'][mesto]></textarea> <td> <input type=checkbox name = rod[mama][ucheba]['+i+'][netochno]> </table> <p>  </div> <div class = '+ id + ' id = ' + id + '>';
+		var s = 'add_uch_'+rod+i;
+		var id = 'add_uch_'+rod+i2;
+		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod['+rod+'][ucheba]['+i+'][period]> <td> <textarea name = rod['+rod+'][ucheba]['+i+'][mesto]></textarea> <td> <input type=checkbox name = rod['+rod+'][ucheba]['+i+'][netochno]> </table> <p>  </div> <div class = '+ id + ' id = ' + id + '>';
 		console.log(i);
 		console.log(s);
 		console.log(id);
@@ -133,11 +149,11 @@ var k = 0;
 
 	}
 
-	function add_rab()
+	function add_rab(rod)
 	{
 		var j2 = j+1;
-		var s = 'add_rab'+j;
-		var id = 'add_rab'+j2;
+		var s = 'add_rab_'+rod+j;
+		var id = 'add_rab_'+rod+j2;
 		var html = ' <p> <table border = 1> <tr> <td> Период работы <td> Должность <td> Название предприятия <br>(учреждения, организации) <td> Не точно <tr> <td> <input type=text name = rod[mama][rabota]['+j+'][period]> <td> <textarea name = rod[mama][rabota]['+j+'][dolzhnost]></textarea> <td> <textarea name = rod[mama][rabota]['+j+'][mesto]></textarea> <td> <input type=checkbox name = rod[mama][rabota]['+j+'][netochno]> </table> <p></div>  <div class = '+id+' id = '+id+' >';
 		console.log(j);
 		console.log(s);
@@ -147,18 +163,26 @@ var k = 0;
 
 	}
 
-	function add_adr()
+	function add_adr(rod)
 	{
 		var k2 = k+1;
-		var s = 'add_adr'+k;
-		var id = 'add_adr'+k2;
+		var s = 'add_adr_'+rod+k;
+		var id = 'add_adr_'+rod+k2;
 		var html = ' <p> <table border = 1> <tr> <td> Город <td> район <td> улица <td> дом <td> корпус <td> квартира <td> период <td> Не точно <tr> <td> <input type=text name = rod[mama][adres]['+k+'][gorod]> <td> <input type=text  name = rod[mama][adres]['+k+'][raion]> <td> <input type=text name = rod[mama][adres]['+k+'][ulica]> <td> <input type=text name = rod[mama][adres]['+k+'][dom]> <td> <input type=text name = rod[mama][adres]['+k+'][korpus]> <td> <input type=text name = rod[mama][adres]['+k+'][kv]> <td> <input type=text name = rod[mama][adres]['+k+'][period]> <td> <input type=checkbox name = rod[mama][adres]['+k+'][netochno]> </table> <p> </div> <div class = '+id+' id = '+id+' > ';
 		console.log(k);
 		console.log(s);
 		console.log(id);
 		document.getElementById(s).innerHTML=html; 
 		k++;
-
 	}
 
+	function add_bra(rod)
+	{
+		var l2 = l+1;
+		var s = 'add_bra_'+rod+l;
+		var id = 'add_bra_'+rod+l2;
+		var html = ' <p> <table border = 1> <tr> <td> ФИО <td> жив <td> дата рождения <td> место рождения <tr> <td> <input type=text name = rod[mama][brat]['+l+'][fio]> <td> <input type=radio name = rod[mama][brat]['+l+'][live] value=1  > &nbsp да  &nbsp <input type=radio name = rod[mama][brat]['+l+'][live] value=0 > &nbsp нет <td> <input type=text name = rod[mama][brat]['+l+'][data_r]> <td> <input type=text name = rod[mama][brat]['+l+'][mesto_r]> </table> <p> </div> <div class = '+id+' id = '+id+' > ';
+		document.getElementById(s).innerHTML=html; 
+		l++;
+	}
 
