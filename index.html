@@ -1,13 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<style>
-	   table {
-	    border-spacing: 17px 11px; /* Расстояние между ячейками */
-	   }
-	   td {
-	    padding: 5px; /* Поля вокруг текста */
-	   }
-  </style>
   <head>
   <meta charset="utf-8">
   </head>
@@ -146,87 +138,110 @@
 
 <p>
 
+<b>
 Данные о супругах:
-Первый брак(галочка), дата и место рождения супруга
+</b>
+	<p>
+Первый брак
+	&nbsp
+	<input type=checkbox name = rod[mama][first_b][value]>
+	<p>
+дата рождения супруга
+	&nbsp
+	<input type=text name = rod[mama][data_r_s][value]>
+	<p>
+место рождения супруга
+	&nbsp
+	<input type=text name = rod[mama][mesto_r_s][value]>
+	<p>
+
+	<table border=1>
+	<tr>
+<td>
+Был ли членом партии
+<td>
+Был ли в эвакуации
+<td>
+Был ли на фронте
+	<tr>
+<td>
+		<input type=radio name = suprug value=1  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0 > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2 > 
+&nbsp
+	неизвестно
+
+<td>
+		<input type=radio name = suprug value=1  onclick="e_m_s();" > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0  onclick="no_e_m_s();" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2  onclick="no_e_m_s();" > 
+&nbsp
+	неизвестно
+
+		<div class = evac_m_s id = evac_m_s></div>
+
+<td>
+		<input type=radio name = suprug value=1  onclick="f_m_s();"  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = suprug value=0  onclick="no_f_m_s();" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = suprug value=2 onclick="no_f_m_s();" > 
+&nbsp
+	неизвестно
+
+		<div class = evac_m_s id = front_m_s></div>
+
+
+</table>
+
+<p>
+<b>
+МЕСТА УЧЕБЫ
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+Период учебы     
+<td>
+Название учебного заведения
+<td>
+Не точно
+<tr>
+<td>
+<input type=text name = rod[mama][ucheba][0][period]>
+<td>
+<textarea name = rod[mama][ucheba][0][mesto]></textarea>
+<td>
+<input type=checkbox name = rod[mama][ucheba][0][netochno]>
+</table>
+<p>
+
+<div class = add_uch id = add_uch ></div>
+
+<div class = add_uch id = b_uch >
+<button  type="button" onclick="add_uch();">добавить еще одно место учебы</button>
+</div>
+
+<p>
 <input type=submit value = Отпправить>
 </form>
 
 
-<script type="text/javascript">
-
-
-	function s()
-	{
-		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = inicialy><p> Дата рождения&nbsp<input type=text name = data_r><p> Место рождения&nbsp<input type=text name = mesto_r><p> Место брака&nbsp<input type=text name = mesto_b><p> ';
-		document.getElementById('suprug').innerHTML=html; 
-	}
-
-	function no_s()
-	{
-		var html = '';
-		document.getElementById('suprug').innerHTML=html; 
-	}
-
-	function e()
-	{
-		var html = 'Откуда&nbsp<input type=text name = otkuda>&nbsp Куда<input type=text name = kuda>';
-		document.getElementById('evac').innerHTML=html; 
-	}
-
-	function no_e()
-	{
-		var html = '';
-		document.getElementById('evac').innerHTML=html; 
-	}
-
-	function f()
-	{
-		var html = 'Где&nbsp<input type=text name = f_gde>&nbsp В какой части<input type=text name = f_chast>';
-		document.getElementById('front').innerHTML=html; 
-	}
-
-	function no_f()
-	{
-		var html = '';
-		document.getElementById('front').innerHTML=html; 
-	}
-
-	function m()
-	{
-	var chbox;
-	chbox=document.getElementById('id_mama');
-		if (chbox.checked) {
-			var html = 'Где&nbsp<input type=text name = f_gde>&nbsp В какой части<input type=text name = f_chast>';
-			document.getElementById('mama').innerHTML=html; 
-		}
-		else {
-			var html = '';
-			document.getElementById('mama').innerHTML=html; 
-		}
-
-	}
-
-	function no_m()
-	{
-		var html = '';
-		document.getElementById('mama').innerHTML=html; 
-	}
-
-	function no_l()
-	{
-		var html = ' <table><tr> <td> Дата смерти <td> <input type=text name = rod[mama][data_s][value]> <td> <input type=checkbox name = rod[mama][data_s][netochno]> <tr> <td> Место смерти&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td> <input type=text name = rod[mama][mesto_s][value]> <td> <input type=checkbox name = rod[mama][mesto_s][netochno]> </table>';
-		document.getElementById('die').innerHTML=html; 
-}
-
-	function l()
-	{
-		var html = '';
-		document.getElementById('die').innerHTML=html; 
-	}
-
-
-
-
-
-</script>
-
+<script type="text/javascript" src="script.js"></script>
