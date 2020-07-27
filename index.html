@@ -12,34 +12,34 @@
 <b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
 
 <form method=post action=add.php>
-	Ваши инициалы&nbsp<input type=text name = inicialy><p>
-	Дата рождения&nbsp<input type=text name = data_r><p>
-	Место рождения&nbsp<input type=text name = mesto_r><p>
+	Ваши инициалы&nbsp<input type=text name = info[inicialy]><p>
+	Дата рождения&nbsp<input type=text name = info[data_r]><p>
+	Место рождения&nbsp<input type=text name = info[mesto_r]><p>
 	Супруг/а
-		&nbsp<input type=radio name = suprug value=1 onclick="s();" > да
-		&nbsp<input type=radio name = suprug value=0 onclick="no_s();" > нет
+		&nbsp<input type=radio name = info[suprug] value=1 onclick="s();" > да
+		&nbsp<input type=radio name = info[suprug] value=0 onclick="no_s();" > нет
 		<br>
 
 		<div class = suprug id = suprug></div>
 		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
 	 	Есть ли еврейские корни
-		&nbsp<input type=radio name = korni value=1 > да
-		&nbsp<input type=radio name = korni value=0 > нет
+		&nbsp<input type=radio name = info[korni] value=1 > да
+		&nbsp<input type=radio name = info[korni] value=0 > нет
 		<p>
 
 		<b>Дополнительная информация:</b><p>
 	Партийный да/нет
-		&nbsp<input type=radio name = part value=1 > да
-		&nbsp<input type=radio name = part value=0 > нет
+		&nbsp<input type=radio name = info[part] value=1 > да
+		&nbsp<input type=radio name = info[part] value=0 > нет
 		<p>
 	Был ли в эвакуации 
-		&nbsp<input type=radio name = evac value=1 onclick="e();" > да
-		&nbsp<input type=radio name = evac value=0 onclick="no_e();" > нет
+		&nbsp<input type=radio name = info[evac] value=1 onclick="e();" > да
+		&nbsp<input type=radio name = info[evac] value=0 onclick="no_e();" > нет
 		<div class = evac id = evac></div>
 	<p>
 	Был ли на фронте да/нет 
-		&nbsp<input type=radio name = front value=1 onclick="f();" > да
-		&nbsp<input type=radio name = front value=0 onclick="no_f();"  > нет
+		&nbsp<input type=radio name = info[front] value=1 onclick="f();" > да
+		&nbsp<input type=radio name = info[front] value=0 onclick="no_f();"  > нет
 		<div class = front id = front></div>
 		<p>
 
@@ -50,29 +50,29 @@
 <td>
 Мама 
 <!-- &nbsp<input id="id_mama" type=checkbox name = mama  onchange = "f_mama();"> --!>
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "f_mama('mama');"> 
+&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "f_rod('mama');"> 
 <td>
 папа
-&nbsp<input id="id_papa" type=checkbox name = papa  onchange = "f_mama('papa');"> 
+&nbsp<input id="id_papa" type=checkbox name = papa  onchange = "f_rod('papa');"> 
 <td>
 дедушка по маме
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+&nbsp<input id="id_ded_m" type=checkbox name = ded_m  onchange = "f_rod('ded_m');"> 
 <td>
 дедушка по папе
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+&nbsp<input id="id_ded_p" type=checkbox name = ded_p  onchange = "f_rod('ded_p');"> 
 <tr>
 <td>
 бабушка по маме
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+&nbsp<input id="id_bab_m" type=checkbox name = bab_m  onchange = "f_rod('bab_m');"> 
 <td>
-бабушка по маме
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+бабушка по папе
+&nbsp<input id="id_bab_p" type=checkbox name = bab_p  onchange = "f_rod('bab_p');"> 
 <td>
 прабабушка по материнской линии 
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+&nbsp<input id="id_prabab_m" type=checkbox name = prabab_m  onchange = "f_rod('prabab_m');"> 
 <td>
 другое
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "m();"> 
+&nbsp<input id="id_drugoe" type=checkbox name = drugoe  onchange = "f_drugoe();"> 
 </table>
 <p>
 <!--Каждая галочка создает соответствующий блок в анкете. 
@@ -80,6 +80,12 @@
 
 		<div class = mama id = mama></div>
 		<div class = papa id = papa></div>
+		<div class = ded_m id = ded_m></div>
+		<div class = ded_p id = ded_p></div>
+		<div class = bab_m id = bab_m></div>
+		<div class = bab_p id = bab_p></div>
+		<div class = prabab_m id = prabab_m></div>
+		<div class = drugoe id = drugoe></div>
 <p>
 <input type=submit value = Отпправить>
 </form>
@@ -93,7 +99,7 @@ var arr = new Map([
 
 	function s()
 	{
-		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = info[inicialy]><p> Дата рождения&nbsp<input type=text name = info[data_r]><p> Место рождения&nbsp<input type=text name = info[mesto_r]><p> Место брака&nbsp<input type=text name = info[mesto_b]><p> ';
+		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = info[suprug][inicialy]><p> Дата рождения&nbsp<input type=text name = info[suprug][data_r]><p> Место рождения&nbsp<input type=text name = info[suprug][mesto_r]><p> Место брака&nbsp<input type=text name = info[suprug][mesto_b]><p> ';
 		document.getElementById('suprug').innerHTML=html; 
 	}
 
@@ -151,7 +157,7 @@ var arr = new Map([
     });
 }
 
-	function f_mama(rod)
+	function f_rod(rod)
 	{
 	var chbox;
 	chbox=document.getElementById('id_' + rod);
