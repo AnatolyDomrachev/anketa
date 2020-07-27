@@ -1,3 +1,6 @@
+let arr = [];
+arr['mama'][i] = 0;
+
 var i = 0;
 var j = 0;
 var k = 0;
@@ -63,20 +66,20 @@ var l = 0;
     });
 }
 
-	function f_mama()
+	function f_mama(rod)
 	{
 	var chbox;
-	chbox=document.getElementById('id_mama');
+	chbox=document.getElementById('id_' + rod);
 		if (chbox.checked) {
-			ftc('mama.html', 'mama');
+			ftc( rod + '.html',  rod );
 		}
 		else {
 			var html = '';
-			document.getElementById('mama').innerHTML=html; 
+			document.getElementById( rod ).innerHTML=html; 
 		}
 
 	}
-
+/*
 	function f_papa()
 	{
 	var chbox;
@@ -90,6 +93,7 @@ var l = 0;
 		}
 
 	}
+*/
 
 
 	function no_m()
@@ -140,10 +144,12 @@ var l = 0;
 		i2 = i+1;
 		var s = 'add_uch_'+rod+i;
 		var id = 'add_uch_'+rod+i2;
-		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod['+rod+'][ucheba]['+i+'][period]> <td> <textarea name = rod['+rod+'][ucheba]['+i+'][mesto]></textarea> <td> <input type=checkbox name = rod['+rod+'][ucheba]['+i+'][netochno]> </table> <p>  </div> <div class = '+ id + ' id = ' + id + '>';
+		var html = ' <p> <table border = 1> <tr> <td> Период учебы     <td> Название учебного заведения <td> Не точно <tr> <td> <input type=text name = rod['+rod+'][ucheba]['+i2+'][period]> <td> <textarea name = rod['+rod+'][ucheba]['+i2+'][mesto]></textarea> <td> <input type=checkbox name = rod['+rod+'][ucheba]['+i2+'][netochno]> </table> <p>  </div> <div class = '+ id + ' id = ' + id + '>';
 		console.log(i);
 		console.log(s);
 		console.log(id);
+		console.log(html);
+		console.log(arr);
 		document.getElementById(s).innerHTML=html; 
 		i++;
 
