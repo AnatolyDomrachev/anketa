@@ -12,7 +12,32 @@
 <b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
 
 <form enctype="multipart/form-data" method=post action=add.php>
-	Ваши инициалы&nbsp<input type=text name = info[inicialy]><p>
+	Ваши инициалы&nbsp<input type=text name = info[inicialy]>
+	<p>
+	Добавить другие варианты ФИО
+	<p>
+	
+
+<table>
+
+	<tr>
+	<td>
+	девичья фамилия
+	<input id="id_mama" type=checkbox name = dev_fam onchange = "f_dev_fam();"> 
+	&nbsp
+	<td>
+	смена фамилии/имени/отчества
+	<input id="id_papa" type=checkbox name = smena_fam  onchange = "f_smena_fam();"> 
+	&nbsp
+	<td>
+	русификация еврейских фамилии/имени/отчества
+	<input id="id_ded_m" type=checkbox name = rus_fam  onchange = "f_rus_fam();"> 
+
+</table>
+
+<p>
+
+
 	Дата рождения&nbsp<input type=text name = info[data_r]><p>
 	Место рождения&nbsp<input type=text name = info[mesto_r]><p>
 	Супруг/а
