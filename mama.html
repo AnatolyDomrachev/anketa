@@ -1,15 +1,16 @@
 </div>
-		<b>Информация о маме<br></b>
 		<p>
+		<h2>Информация о маме</h2>
+		<br>
 Чем больше информации – тем результативнее будет наша работа!<br>
 (Другие Варианты Инициалов – попадает в дополнительную информацию, если заполнено)<br>
 ФИО 
 <input type=text name = rod[mama][fio][value]>
 <br>
 <br>
-	&nbsp<input type=radio name = live value=1  onclick="l();">
+	&nbsp<input type=radio name = rod[mama][live] value=1  onclick="l('mama');">
 	жив	
-	&nbsp<input type=radio name = live value=0 onclick="no_l();">
+	&nbsp<input type=radio name = rod[mama][live] value=0 onclick="no_l('mama');">
 	мертв
 <br>
 <br>
@@ -58,7 +59,7 @@
 <input type=checkbox name = rod[mama][mesto_b][netochno]>
 </table>
 
-<div class = die id = die></div>
+<div class = die_mama id = die_mama></div>
 
 <p>
 
@@ -68,15 +69,15 @@
 	<p>
 Первый брак
 	&nbsp
-	<input type=checkbox name = rod[mama][first_b][value]>
+	<input type=checkbox name = rod[mama][suprug][first_b]>
 	<p>
 дата рождения супруга
 	&nbsp
-	<input type=text name = rod[mama][data_r_s][value]>
+	<input type=text name = rod[mama][suprug][data_r]>
 	<p>
 место рождения супруга
 	&nbsp
-	<input type=text name = rod[mama][mesto_r_s][value]>
+	<input type=text name = rod[mama][suprug][mesto_r]>
 	<p>
 
 	<table border=1>
@@ -89,47 +90,47 @@
 Был ли на фронте
 	<tr>
 <td>
-		<input type=radio name = suprug value=1  > 
+		<input type=radio name = rod[mama][suprug][part][yes] value=1  > 
 &nbsp
 	да
 	<p>
-		<input type=radio name = suprug value=0 > 
+		<input type=radio name = rod[mama][suprug][part][yes] value=0 > 
 &nbsp
 	нет
 	<p>
-		<input type=radio name = suprug value=2 > 
+		<input type=radio name = rod[mama][suprug][part][yes] value=2 > 
 &nbsp
 	неизвестно
 
 <td>
-		<input type=radio name = suprug value=1  onclick="e_m_s();" > 
+		<input type=radio name = rod[mama][suprug][evac][yes] value=1  onclick="e_s('mama');" > 
 &nbsp
 	да
 	<p>
-		<input type=radio name = suprug value=0  onclick="no_e_m_s();" > 
+		<input type=radio name = rod[mama][suprug][evac][yes] value=0  onclick="no_e_s('mama');" > 
 &nbsp
 	нет
 	<p>
-		<input type=radio name = suprug value=2  onclick="no_e_m_s();" > 
+		<input type=radio name = rod[mama][suprug][evac][yes] value=2  onclick="no_e_s('mama');" > 
 &nbsp
 	неизвестно
 
-		<div class = evac_m_s id = evac_m_s></div>
+		<div class = evac_s_mama id = evac_s_mama></div>
 
 <td>
-		<input type=radio name = suprug value=1  onclick="f_m_s();"  > 
+		<input type=radio name = rod[mama][suprug][front][yes] value=1  onclick="f_s('mama');"  > 
 &nbsp
 	да
 	<p>
-		<input type=radio name = suprug value=0  onclick="no_f_m_s();" > 
+		<input type=radio name = rod[mama][suprug][front][yes] value=0  onclick="no_f_s('mama');" > 
 &nbsp
 	нет
 	<p>
-		<input type=radio name = suprug value=2 onclick="no_f_m_s();" > 
+		<input type=radio name = rod[mama][suprug][front][yes] value=2 onclick="no_f_s('mama');" > 
 &nbsp
 	неизвестно
 
-		<div class = evac_m_s id = front_m_s></div>
+		<div class = front_s_mama id = front_s_mama></div>
 
 
 </table>

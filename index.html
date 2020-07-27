@@ -93,7 +93,7 @@ var arr = new Map([
 
 	function s()
 	{
-		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = inicialy><p> Дата рождения&nbsp<input type=text name = data_r><p> Место рождения&nbsp<input type=text name = mesto_r><p> Место брака&nbsp<input type=text name = mesto_b><p> ';
+		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = info[inicialy]><p> Дата рождения&nbsp<input type=text name = info[data_r]><p> Место рождения&nbsp<input type=text name = info[mesto_r]><p> Место брака&nbsp<input type=text name = info[mesto_b]><p> ';
 		document.getElementById('suprug').innerHTML=html; 
 	}
 
@@ -105,7 +105,7 @@ var arr = new Map([
 
 	function e()
 	{
-		var html = 'Откуда&nbsp<input type=text name = otkuda>&nbsp Куда<input type=text name = kuda>';
+		var html = 'Откуда&nbsp<input type=text name = info[otkuda]>&nbsp Куда<input type=text name = info[kuda]>';
 		document.getElementById('evac').innerHTML=html; 
 	}
 
@@ -117,7 +117,7 @@ var arr = new Map([
 
 	function f()
 	{
-		var html = 'Где&nbsp<input type=text name = f_gde>&nbsp В какой части<input type=text name = f_chast>';
+		var html = 'Где&nbsp<input type=text name = info[f_gde]>&nbsp В какой части<input type=text name = info[f_chast]>';
 		document.getElementById('front').innerHTML=html; 
 	}
 
@@ -187,41 +187,41 @@ var arr = new Map([
 		document.getElementById('mama').innerHTML=html; 
 	}
 
-	function no_l()
+	function no_l(rod)
 	{
-		var html = ' <table><tr> <td> Дата смерти <td> <input type=text name = rod[mama][data_s][value]> <td> <input type=checkbox name = rod[mama][data_s][netochno]> <tr> <td> Место смерти&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td> <input type=text name = rod[mama][mesto_s][value]> <td> <input type=checkbox name = rod[mama][mesto_s][netochno]> </table>';
-		document.getElementById('die').innerHTML=html; 
+		var html = ' <table><tr> <td> Дата смерти <td> <input type=text name = rod['+rod+'][data_s][value]> <td> <input type=checkbox name = rod['+rod+'][data_s][netochno]> <tr> <td> Место смерти&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td> <input type=text name = rod['+rod+'][mesto_s][value]> <td> <input type=checkbox name = rod['+rod+'][mesto_s][netochno]> </table>';
+		document.getElementById('die_'+rod).innerHTML=html; 
 }
 
-	function l()
+	function l(rod)
 	{
 		var html = '';
-		document.getElementById('die').innerHTML=html; 
+		document.getElementById('die_'+rod).innerHTML=html; 
 	}
 
-	function e_m_s()
+	function e_s(rod)
 	{
-		var html = 'Откуда&nbsp<input type=text name = rod[mama][es][otkuda]>&nbsp Куда<input type=text name = rod[mama][es][kuda]>';
-		document.getElementById('evac_m_s').innerHTML=html; 
+		var html = 'Откуда&nbsp<input type=text name = rod['+rod+'][suprug][evac][otkuda]>&nbsp Куда<input type=text name = rod['+rod+'][suprug][evac][kuda]>';
+		document.getElementById('evac_s_'+rod).innerHTML=html; 
 	}
 
-	function no_e_m_s()
-	{
-		var html = '';
-		document.getElementById('evac_m_s').innerHTML=html; 
-	}
-
-	function f_m_s()
-	{
-		var html = 'Где&nbsp<input type=text name = rod[mama][fs][gde]>&nbsp В какой части<input type=text name = rod[mama][fs][chast]>';
-
-		document.getElementById('front_m_s').innerHTML=html; 
-	}
-
-	function no_f_m_s()
+	function no_e_s(rod)
 	{
 		var html = '';
-		document.getElementById('front_m_s').innerHTML=html; 
+		document.getElementById('evac_s_'+rod).innerHTML=html; 
+	}
+
+	function f_s(rod)
+	{
+		var html = 'Где&nbsp<input type=text name = rod['+rod+'][suprug][front][gde]>&nbsp В какой части<input type=text name = rod['+rod+'][suprug][front][chast]>';
+
+		document.getElementById('front_s_'+rod).innerHTML=html; 
+	}
+
+	function no_f_s(rod)
+	{
+		var html = '';
+		document.getElementById('front_s_'+rod).innerHTML=html; 
 	}
 
 	function add_uch(rod)
