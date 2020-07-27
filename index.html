@@ -11,7 +11,7 @@
 <p>
 <b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
 
-<form method=post action=add.php>
+<form enctype="multipart/form-data" method=post action=add.php>
 	Ваши инициалы&nbsp<input type=text name = info[inicialy]><p>
 	Дата рождения&nbsp<input type=text name = info[data_r]><p>
 	Место рождения&nbsp<input type=text name = info[mesto_r]><p>
@@ -101,6 +101,8 @@ var arr = new Map([
   ['bab_p', {i:0,j:0,k:0,l:0}],
   ['prabab_m', {i:0,j:0,k:0,l:0}],
 ]);  
+
+ var fn = 0;
 
 	function s()
 	{
@@ -234,6 +236,13 @@ var arr = new Map([
 		var html = '';
 		document.getElementById('front_s_'+rod).innerHTML=html; 
 	}
+
+	function add_file()
+{
+		var id = 'add_files'+fn;
+                var html = 'Выберите файл для отправки <br> <input type="file" name="files['+fn+']"> </div> <div class = '+ id + ' id = ' + id + '>';
+		fn++;
+}
 
 	function add_uch(rod)
 	{
