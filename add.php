@@ -15,3 +15,14 @@ echo "<pre>";
 print_r($_POST);
 
 ?>
+
+<h2>
+Получены файлы
+</h2>
+
+<?php
+
+print_r($_FILES);
+
+
+?>

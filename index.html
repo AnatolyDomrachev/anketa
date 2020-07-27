@@ -239,12 +239,15 @@ var arr = new Map([
 
 	function add_file()
 {
+		i2 = fn+1;
 		var s = 'add_files'+fn;
-		var id = 'add_files'+fn+1;
-                var html = 'Выберите файл для отправки <br> <input type="file" name="files['+fn+']"> </div> <div class = '+ id + ' id = ' + id + '>';
+		var id = 'add_files'+i2;
+	var html = 'Выберите файл для отправки <p> <input type="file" name="files['+fn+']"><p> </div> <div class = '+ id + ' id = ' + id + '>';
 		fn++;
 		document.getElementById(s).innerHTML=html; 
+		console.log(s);
 		console.log(id);
+		console.log(html);
 }
 
 	function add_uch(rod)
