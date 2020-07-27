@@ -1,0 +1,283 @@
+</div>
+		<p>
+		<h2>Информация о дедушкe по маме</h2>
+		<br>
+Чем больше информации – тем результативнее будет наша работа!<br>
+(Другие Варианты Инициалов – попадает в дополнительную информацию, если заполнено)<br>
+ФИО 
+<input type=text name = rod[ded_m][fio][value]>
+<br>
+<br>
+	&nbsp<input type=radio name = rod[ded_m][live] value=1  onclick="l('ded_m');">
+	жив	
+	&nbsp<input type=radio name = rod[ded_m][live] value=0 onclick="no_l('ded_m');">
+	мертв
+<br>
+<br>
+Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
+
+<table>
+<tr>
+<td>
+<td>
+<td>
+<b>Неточная<br> информация</b>
+<tr>
+<td>
+Дата рождения               
+<td>
+<input type=text name = rod[ded_m][data_r][value]>
+<td>
+<input type=checkbox name = rod[ded_m][data_r][netochno]>
+<tr>
+<td>
+Место рождения 
+<td>
+<input type=text name = rod[ded_m][mesto_r][value]>
+<td>
+<input type=checkbox name = rod[ded_m][mesto_r][netochno]>
+<tr>
+<td>
+ФИО супруга(и)
+<td>
+<input type=text name = rod[ded_m][suprug][value]>
+<td>
+<input type=checkbox name = rod[ded_m][suprug][netochno]>
+<tr>
+<td>
+Дата вступления в брак
+<td>
+<input type=text name = rod[ded_m][data_b][value]>
+<td>
+<input type=checkbox name = rod[ded_m][data_b][netochno]>
+<tr>
+<td>
+Место вступления в брак
+<td>
+<input type=text name = rod[ded_m][mesto_b][value]>
+<td>
+<input type=checkbox name = rod[ded_m][mesto_b][netochno]>
+</table>
+
+<div class = die_ded_m id = die_ded_m></div>
+
+<p>
+
+<b>
+Данные о супругах:
+</b>
+	<p>
+Первый брак
+	&nbsp
+	<input type=checkbox name = rod[ded_m][suprug][first_b]>
+	<p>
+дата рождения супруга
+	&nbsp
+	<input type=text name = rod[ded_m][suprug][data_r]>
+	<p>
+место рождения супруга
+	&nbsp
+	<input type=text name = rod[ded_m][suprug][mesto_r]>
+	<p>
+
+	<table border=1>
+	<tr>
+<td>
+Был ли членом партии
+<td>
+Был ли в эвакуации
+<td>
+Был ли на фронте
+	<tr>
+<td>
+		<input type=radio name = rod[ded_m][suprug][part][yes] value=1  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = rod[ded_m][suprug][part][yes] value=0 > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = rod[ded_m][suprug][part][yes] value=2 > 
+&nbsp
+	неизвестно
+
+<td>
+		<input type=radio name = rod[ded_m][suprug][evac][yes] value=1  onclick="e_s('ded_m');" > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = rod[ded_m][suprug][evac][yes] value=0  onclick="no_e_s('ded_m');" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = rod[ded_m][suprug][evac][yes] value=2  onclick="no_e_s('ded_m');" > 
+&nbsp
+	неизвестно
+
+		<div class = evac_s_ded_m id = evac_s_ded_m></div>
+
+<td>
+		<input type=radio name = rod[ded_m][suprug][front][yes] value=1  onclick="f_s('ded_m');"  > 
+&nbsp
+	да
+	<p>
+		<input type=radio name = rod[ded_m][suprug][front][yes] value=0  onclick="no_f_s('ded_m');" > 
+&nbsp
+	нет
+	<p>
+		<input type=radio name = rod[ded_m][suprug][front][yes] value=2 onclick="no_f_s('ded_m');" > 
+&nbsp
+	неизвестно
+
+		<div class = front_s_ded_m id = front_s_ded_m></div>
+
+
+</table>
+
+<p>
+<b>
+МЕСТА УЧЕБЫ
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+Период учебы     
+<td>
+Название учебного заведения
+<td>
+Не точно
+<tr>
+<td>
+<input type=text name = rod[ded_m][ucheba][0][period]>
+<td>
+<textarea name = rod[ded_m][ucheba][0][mesto]></textarea>
+<td>
+<input type=checkbox name = rod[ded_m][ucheba][0][netochno]>
+</table>
+<p>
+
+<div class = add_uch_ded_m0 id = add_uch_ded_m0 ></div>
+
+<button  type="button" onclick="add_uch('ded_m');">добавить еще одно место учебы</button>
+
+<p>
+<b>
+МЕСТА РАБОТЫ
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+Период работы                                
+<td>
+Должность
+<td>
+Название предприятия <br>(учреждения, организации)
+<td>
+Не точно
+<tr>
+<td>
+<input type=text name = rod[ded_m][rabota][0][period]>
+<td>
+<textarea name = rod[ded_m][rabota][0][dolzhnost]></textarea>
+<td>
+<textarea name = rod[ded_m][rabota][0][mesto]></textarea>
+<td>
+<input type=checkbox name = rod[ded_m][rabota][0][netochno]>
+</table>
+<p>
+
+<div class = add_rab_ded_m0 id = add_rab_ded_m0 ></div>
+
+<button  type="button" onclick="add_rab('ded_m');">добавить еще одно место работы</button>
+<p>
+<b>
+МЕСТА ПРОЖИВАНИЯ
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+Город
+<td>
+район
+<td>
+улица
+<td>
+дом
+<td>
+корпус
+<td>
+квартира
+<td>
+период
+<td>
+Не точно
+<tr>
+<td>
+<input type=text name = rod[ded_m][adres][0][gorod]>
+<td>
+<input type=text  name = rod[ded_m][adres][0][raion]>
+<td>
+<input type=text name = rod[ded_m][adres][0][ulica]>
+<td>
+<input type=text name = rod[ded_m][adres][0][dom]>
+<td>
+<input type=text name = rod[ded_m][adres][0][korpus]>
+<td>
+<input type=text name = rod[ded_m][adres][0][kv]>
+<td>
+<input type=text name = rod[ded_m][adres][0][period]>
+<td>
+<input type=checkbox name = rod[ded_m][adres][0][netochno]>
+</table>
+<p>
+
+<div class = add_adr_ded_m0 id = add_adr_ded_m0 ></div>
+
+<button  type="button" onclick="add_adr('ded_m');">добавить еще одно место проживания</button>
+<p>
+
+<b>
+Братья или Сестры
+</b>
+<p>
+<table border = 1>
+<tr>
+<td>
+ФИО
+<td>
+жив
+<td>
+дата рождения
+<td>
+место рождения
+<tr>
+<td>
+<input type=text name = rod[ded_m][brat][0][fio]>
+<td>
+	<input type=radio name = rod[ded_m][brat][0][live] value=1  > 
+&nbsp
+	да
+&nbsp
+		<input type=radio name = rod[ded_m][brat][0][live] value=0 > 
+&nbsp
+	нет
+
+<td>
+<input type=text name = rod[ded_m][brat][0][data_r]>
+<td>
+<input type=text name = rod[ded_m][brat][0][mesto_r]>
+</table>
+<p>
+
+<div class = add_bra_ded_m0 id = add_bra_ded_m0 ></div>
+
+<button  type="button" onclick="add_bra('ded_m');">Добавить еще Брата или Сестру</button>
+<p>
+
+
+<div id = tmp>
+
