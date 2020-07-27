@@ -102,20 +102,6 @@ var arr = new Map([
   ['prabab_m', {i:0,j:0,k:0,l:0}],
 ]);  
 
-	function f_drugoe()
-	{
-	var chbox;
-	chbox=document.getElementById('drugoe');
-		if (chbox.checked) {
-			var html = '<p> <h2>ДРУГИЕ ИЗВЕСТНЫЕ ДАННЫЕ</h2> <p> Любые дополнительные данные могут быть полезны <p> <textarea rows="10" cols="75" name = info[drugoe]></textarea> ';
-			document.getElementById('drugoe').innerHTML=html; 
-		}
-		else {
-			var html = '';
-			document.getElementById( 'drugoe' ).innerHTML=html; 
-		}
-	}
-
 	function s()
 	{
 		var html = ' <p><b>Информация о супруге</b><p> Инициалы&nbsp<input type=text name = info[suprug][inicialy]><p> Дата рождения&nbsp<input type=text name = info[suprug][data_r]><p> Место рождения&nbsp<input type=text name = info[suprug][mesto_r]><p> Место брака&nbsp<input type=text name = info[suprug][mesto_b]><p> ';
