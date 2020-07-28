@@ -100,22 +100,10 @@
 <!-- 
     Вместо: Укажите родственников по еврейской линии - Укажите, по какой линии еврейские корни: по материнской линии, по отцовской линии, по обеим линиям. 
 						    --!>
-
-<b>Укажите, по какой линии еврейские корни:</b><p>
-
-<table>
-<tr>
-<td>
-по материнской линии
-&nbsp<input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod('mat_lin');"> 
-<td>
-по отцовской линии
-&nbsp<input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod('otc_lin');"> 
-<td>
-</table>
-
+		<div class = korni id = korni></div>
 		<div class = mat_lin id = mat_lin></div>
 		<div class = otc_lin id = otc_lin></div>
+		<div class = obe_lin id = obe_lin></div>
 
 
 <!--Каждая галочка создает соответствующий блок в анкете. 
@@ -146,6 +134,21 @@ var arr = new Map([
 ]);  
 
  var fn = 0;
+
+	function f_korni()
+	{
+		var html = '<b>Укажите, по какой линии еврейские корни:</b><p> </div> <table> <tr> <td> по материнской линии <input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod(\'mat_lin\');">&nbsp <td> по отцовской линии <input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod(\'otc_lin\');"> &nbsp<td> по обеим линиям &nbsp<input id="id_obe_lin" type=checkbox name = obe_lin  onchange = "f_rod(\'obe_lin\');"> </table> <div id = tmp> ';
+
+
+		document.getElementById('korni').innerHTML=html; 
+	}
+
+	function no_f_korni()
+	{
+		var html = '';
+		document.getElementById('korni').innerHTML=html; 
+	}
+
 
 	function s()
 	{
