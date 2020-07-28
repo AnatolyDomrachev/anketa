@@ -77,8 +77,8 @@
 		<div class = suprug id = suprug></div>
 		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
 	 	Есть ли еврейские корни
-		&nbsp<input type=radio name = info[korni] value=1 > да
-		&nbsp<input type=radio name = info[korni] value=0 > нет
+		&nbsp<input type=radio name = info[korni] value=1  onclick="f_korni();" > да
+		&nbsp<input type=radio name = info[korni] value=0  onclick="no_f_korni();" > нет
 		<p>
 
 		<b>Дополнительная информация:</b><p>
@@ -97,38 +97,27 @@
 		<div class = front id = front></div>
 		<p>
 
-<b>Укажите родственников по еврейской линии:</b><p>
+<!-- 
+    Вместо: Укажите родственников по еврейской линии - Укажите, по какой линии еврейские корни: по материнской линии, по отцовской линии, по обеим линиям. 
+						    --!>
+
+<b>Укажите, по какой линии еврейские корни:</b><p>
 
 <table>
 <tr>
 <td>
-Мама 
-<!-- &nbsp<input id="id_mama" type=checkbox name = mama  onchange = "f_mama();"> --!>
-&nbsp<input id="id_mama" type=checkbox name = mama  onchange = "f_rod('mama');"> 
+по материнской линии
+&nbsp<input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod('mat_lin');"> 
 <td>
-папа
-&nbsp<input id="id_papa" type=checkbox name = papa  onchange = "f_rod('papa');"> 
+по отцовской линии
+&nbsp<input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod('otc_lin');"> 
 <td>
-дедушка по маме
-&nbsp<input id="id_ded_m" type=checkbox name = ded_m  onchange = "f_rod('ded_m');"> 
-<td>
-дедушка по папе
-&nbsp<input id="id_ded_p" type=checkbox name = ded_p  onchange = "f_rod('ded_p');"> 
-<tr>
-<td>
-бабушка по маме
-&nbsp<input id="id_bab_m" type=checkbox name = bab_m  onchange = "f_rod('bab_m');"> 
-<td>
-бабушка по папе
-&nbsp<input id="id_bab_p" type=checkbox name = bab_p  onchange = "f_rod('bab_p');"> 
-<td>
-прабабушка по материнской линии 
-&nbsp<input id="id_prabab_m" type=checkbox name = prabab_m  onchange = "f_rod('prabab_m');"> 
-<td>
-другое
-&nbsp<input id="id_drugoe" type=checkbox name = drugoe  onchange = "f_rod('drugoe');"> 
 </table>
-<p>
+
+		<div class = mat_lin id = mat_lin></div>
+		<div class = otc_lin id = otc_lin></div>
+
+
 <!--Каждая галочка создает соответствующий блок в анкете. 
 «Другое» создает отдельный блок со свободным текстовым блоком --!>
 
