@@ -137,7 +137,9 @@ var arr = new Map([
 
 	function f_korni()
 	{
-		var html = '<b>Укажите, по какой линии еврейские корни:</b><p> </div> <table> <tr> <td> по материнской линии <input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod(\'mat_lin\');">&nbsp <td> по отцовской линии <input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod(\'otc_lin\');"> &nbsp<td> по обеим линиям &nbsp<input id="id_obe_lin" type=checkbox name = obe_lin  onchange = "f_rod(\'obe_lin\');"> </table> <div id = tmp> ';
+		var html = '<b>Укажите, по какой линии еврейские корни:</b><p> </div> <table> <tr> <td> по материнской линии <input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod(\'mat_lin\');">&nbsp <td> по отцовской линии <input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod(\'otc_lin\');"> </table> <div id = tmp> ';
+
+		//&nbsp<td> по обеим линиям &nbsp<input id="id_obe_lin" type=checkbox name = obe_lin  onchange = "f_rod(\'obe_lin\');"> 
 
 
 		document.getElementById('korni').innerHTML=html; 
@@ -250,12 +252,18 @@ var arr = new Map([
 	{
 		var html = ' <table><tr> <td> Дата смерти <td> <input type=text name = rod['+rod+'][data_s][value]> <td> <input type=checkbox name = rod['+rod+'][data_s][netochno]> <tr> <td> Место смерти&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<td> <input type=text name = rod['+rod+'][mesto_s][value]> <td> <input type=checkbox name = rod['+rod+'][mesto_s][netochno]> </table>';
 		document.getElementById('die_'+rod).innerHTML=html; 
+
+		var html_l = '';
+		document.getElementById('jiv_'+rod).innerHTML=html_l; 
 }
 
 	function l(rod)
 	{
-		var html = '';
-		document.getElementById('die_'+rod).innerHTML=html; 
+		var html_d = '';
+		var html_l = ' <table><tr> <td> Есть ли связь с родственником <td> <input type=text name = rod['+rod+'][sviaz][value]> <td> <input type=checkbox name = rod['+rod+'][sviaz][netochno]> </table>';
+		console.log(html_l);
+		document.getElementById('die_'+rod).innerHTML=html_d; 
+		document.getElementById('jiv_'+rod).innerHTML=html_l; 
 	}
 
 	function e_s(rod)
