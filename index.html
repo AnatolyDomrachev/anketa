@@ -103,7 +103,6 @@
 		<div class = korni id = korni></div>
 		<div class = mat_lin id = mat_lin></div>
 		<div class = otc_lin id = otc_lin></div>
-		<div class = obe_lin id = obe_lin></div>
 
 
 <!--Каждая галочка создает соответствующий блок в анкете. 
@@ -146,7 +145,7 @@ var arr = new Map([
 
 	function f_korni()
 	{
-		var html = '<b>Укажите, по какой линии еврейские корни:</b><p> </div> <table> <tr> <td> по материнской линии <input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod(\'mat_lin\');">&nbsp <td> по отцовской линии <input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod(\'otc_lin\');"> </table> <div id = tmp> ';
+		var html = '<b>Укажите, по какой линии еврейские корни:</b><p> </div> <table> <tr> <td> по материнской линии <input id="id_mat_lin" type=checkbox name = mat_lin  onchange = "f_rod(\'mat_lin\');">&nbsp <td> по отцовской линии <input id="id_otc_lin" type=checkbox name = otc_lin  onchange = "f_rod(\'otc_lin\');">&nbsp<td> по обеим линиям &nbsp<input id="id_obe_lin" type=checkbox name = obe_lin  onchange = "f_obe();"> </table> <div id = tmp> ';
 
 		//&nbsp<td> по обеим линиям &nbsp<input id="id_obe_lin" type=checkbox name = obe_lin  onchange = "f_rod(\'obe_lin\');"> 
 
@@ -234,21 +233,28 @@ var arr = new Map([
 		}
 
 	}
-/*
-	function f_papa()
+
+	function f_obe()
 	{
 	var chbox;
-	chbox=document.getElementById('id_papa');
+	chbox=document.getElementById('id_obe_lin');
 		if (chbox.checked) {
-			ftc('papa.html', 'papa');
+			document.getElementById("id_mat_lin").checked = true;
+			document.getElementById("id_otc_lin").checked = true;
+			ftc('mat_lin.html', 'mat_lin' );
+			ftc('otc_lin.html', 'otc_lin' );
 		}
 		else {
 			var html = '';
-			document.getElementById('papa').innerHTML=html; 
+			document.getElementById( 'mat_lin' ).innerHTML=html; 
+			document.getElementById( 'otc_lin' ).innerHTML=html; 
+			document.getElementById("id_mat_lin").checked = false;
+			document.getElementById("id_otc_lin").checked = false;
 		}
 
 	}
-*/
+
+
 
 
 	function no_m()
