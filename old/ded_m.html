@@ -38,101 +38,48 @@
 <input type=checkbox name = rod[ded_m][mesto_r][netochno]>
 <tr>
 <td>
-ФИО супруги
+ФИО супруга(и)
 <td>
 <input type=text name = rod[ded_m][suprug][value]>
 <td>
 <input type=checkbox name = rod[ded_m][suprug][netochno]>
+<tr>
+<td>
+Дата вступления в брак
+<td>
+<input type=text name = rod[ded_m][data_b][value]>
+<td>
+<input type=checkbox name = rod[ded_m][data_b][netochno]>
+<tr>
+<td>
+Место вступления в брак
+<td>
+<input type=text name = rod[ded_m][mesto_b][value]>
+<td>
+<input type=checkbox name = rod[ded_m][mesto_b][netochno]>
 </table>
 
 <div class = die_ded_m id = die_ded_m></div>
-<div class = jiv_ded_m id = jiv_ded_m></div>
 
 <p>
 
 <b>
-Сведения о браке:
+Данные о супругах:
 </b>
 	<p>
 Первый брак
 	&nbsp
 	<input type=checkbox name = rod[ded_m][suprug][first_b]>
 	<p>
+дата рождения супруга
+	&nbsp
+	<input type=text name = rod[ded_m][suprug][data_r]>
+	<p>
+место рождения супруга
+	&nbsp
+	<input type=text name = rod[ded_m][suprug][mesto_r]>
+	<p>
 
-<table>
-<tr>
-<td>
-<td>
-<td>
-<b>Неточная<br> информация</b>
-<tr>
-<td>
-	 ФИО Супруги
-<td>
-<input type=text name = rod[ded_m][suprug][fio][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][fio][netochno]>
-<tr>
-<td>
-	дата рождения супруги
-<td>
-<input type=text name = rod[ded_m][suprug][data_r][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][data_r][netochno]>
-
-<tr>
-<td>
-	Место рождения
-<td>
-<input type=text name = rod[ded_m][suprug][mesto_r][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][mesto_r][netochno]>
-
-
-<tr>
-<td>
-	Дата заключения брака
-<td>
-<input type=text name = rod[ded_m][suprug][data_b][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][data_b][netochno]>
-<tr>
-<td>
-	Место заключения брака
-<td>
-<input type=text name = rod[ded_m][suprug][mesto_b][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][mesto_b][netochno]>
-
-<tr>
-<td>
-	Дата расторжения(если был расторгнут)
-<td>
-<input type=text name = rod[ded_m][suprug][data_rast_b][value]>
-<td>
-<input type=checkbox name = rod[ded_m][suprug][data_rast_b][netochno]>
-
-</table>
-
-<p>
-<div class = add_pred_brak_ded_m0 id = add_pred_brak_ded_m0 ></div>
-
-<button  type="button" onclick="add_pred_brak('ded_m');">Сведения о предыдущих браках</button>
-<p>
-
-<b>
-Дополнительная информация, o браке
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][suprug][dop]>
-</textarea>
-<p>
-
-<b>
-
-	Дополнительные данные о дедушкe по маме
-</b>
-<p>
 	<table border=1>
 	<tr>
 <td>
@@ -187,6 +134,7 @@
 
 
 </table>
+
 <p>
 <b>
 МЕСТА УЧЕБЫ
@@ -213,14 +161,6 @@
 <div class = add_uch_ded_m0 id = add_uch_ded_m0 ></div>
 
 <button  type="button" onclick="add_uch('ded_m');">добавить еще одно место учебы</button>
-
-<p>
-<b>
-Дополнительная информация, o местаx учебы
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][rabota][dop]>
-</textarea>
 
 <p>
 <b>
@@ -252,17 +192,7 @@
 <div class = add_rab_ded_m0 id = add_rab_ded_m0 ></div>
 
 <button  type="button" onclick="add_rab('ded_m');">добавить еще одно место работы</button>
-
 <p>
-<b>
-Дополнительная информация, o местаx работы
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][rabota][dop]>
-</textarea>
-
-<p>
-
 <b>
 МЕСТА ПРОЖИВАНИЯ
 </b>
@@ -311,15 +241,6 @@
 <p>
 
 <b>
-Дополнительная информация, o местаx проживания
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][adres][dop]>
-</textarea>
-
-<p>
-
-<b>
 Братья или Сестры
 </b>
 <p>
@@ -355,25 +276,7 @@
 <div class = add_bra_ded_m0 id = add_bra_ded_m0 ></div>
 
 <button  type="button" onclick="add_bra('ded_m');">Добавить еще Брата или Сестру</button>
-
 <p>
-<b>
-Дополнительная информация, o братьяx или сестрax
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][brat][dop]>
-</textarea>
-
-<p>
-
-<b>
-Дополнительная информация, o дедушкe по маме
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[ded_m][dop][value]>
-</textarea>
-<p>
-
 
 
 <div id = tmp>
