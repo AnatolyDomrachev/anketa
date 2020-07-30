@@ -62,12 +62,19 @@
  <table>
  <tr>
  <td>
- по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_rod(\'mat_lin\');">
+ по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_mat_lin();">
 &nbsp <td>
- по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_rod(\'otc_lin\');">
+ по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_otc_lin();">
 &nbsp<td>
- по обеим линиям &nbsp<input id="id_obe_lin" type=radio name = korni  onclick = "f_obe();">
+ по обеим линиям &nbsp<input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
  </table>
+
+
+		<div class = rod_head id = rod_head></div>
+		<div class = blocks id = blocks_mat></div>
+		<div class = blocks id = blocks_otc></div>
+		<div class = blocks id = blocks_obe></div>
+
 <!-- 
     Вместо: Укажите родственников по еврейской линии - Укажите, по какой линии еврейские корни: по материнской линии, по отцовской линии, по обеим линиям. 
 						    --!>
@@ -105,6 +112,63 @@ var arr = new Map([
 ]);  
 
  var fn = 0;
+
+function f_obe_lin()
+	{
+		ftc('rod_head.html' , 'rod_head');
+
+		var i;
+
+		ftc('blocks_obe.html' , 'blocks_obe');
+		ftc('null.html' , 'blocks_mat');
+		ftc('null.html' , 'blocks_otc');
+
+		for(i=0; i<9; i++)
+		{
+			var i2 = i+1;
+			var block = 'block_obe_' + i2;
+			console.log(block);
+			ftc(block+'.html', block);
+		}
+	}
+
+function f_otc_lin()
+	{
+		ftc('rod_head.html' , 'rod_head');
+		var arr = [3,2,6,7,9];
+		ftc('blocks_otc.html' , 'blocks_otc');
+		ftc('null.html' , 'blocks_mat');
+		ftc('null.html' , 'blocks_obe');
+
+		arr.forEach(i => 
+			{
+			console.log(i);
+			var block = 'block_otc_' + i;
+			console.log(block);
+			ftc(block+'.html', block);
+			}
+		);
+	}
+
+
+function f_mat_lin()
+	{
+		ftc('rod_head.html' , 'rod_head');
+		var arr = [2,3,4,5,8]
+		ftc('blocks_mat.html' , 'blocks_mat');
+		ftc('null.html' , 'blocks_otc');
+		ftc('null.html' , 'blocks_obe');
+
+		arr.forEach(i => 
+			{
+			console.log(i);
+			var block = 'block_mat_' + i;
+			console.log(block);
+			ftc(block+'.html', block);
+			}
+		);
+	}
+
 
 	function f_korni()
 	{
