@@ -56,144 +56,56 @@
 <p>
 
 <b>
-Сведения о браке:
-</b>
-	<p>
-Первый брак
-	&nbsp
-	<input type=checkbox name = rod[mama][suprug][first_b]>
-	<p>
-
-<table>
-<tr>
-<td>
-<td>
-<td>
-<b>Неточная<br> информация</b>
-<tr>
-<td>
-	 ФИО Супруга
-<td>
-<input type=text name = rod[mama][suprug][fio][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][fio][netochno]>
-<tr>
-<td>
-	дата рождения супруга
-<td>
-<input type=text name = rod[mama][suprug][data_r][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][data_r][netochno]>
-
-<tr>
-<td>
-	Место рождения
-<td>
-<input type=text name = rod[mama][suprug][mesto_r][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][mesto_r][netochno]>
-
-
-<tr>
-<td>
-	Дата заключения брака
-<td>
-<input type=text name = rod[mama][suprug][data_b][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][data_b][netochno]>
-<tr>
-<td>
-	Место заключения брака
-<td>
-<input type=text name = rod[mama][suprug][mesto_b][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][mesto_b][netochno]>
-
-<tr>
-<td>
-	Дата расторжения(если был расторгнут)
-<td>
-<input type=text name = rod[mama][suprug][data_rast_b][value]>
-<td>
-<input type=checkbox name = rod[mama][suprug][data_rast_b][netochno]>
-
-</table>
-
-<p>
-<div class = add_pred_brak_mama0 id = add_pred_brak_mama0 ></div>
-
-<button  type="button" onclick="add_pred_brak('mama');">Сведения о предыдущих браках</button>
-<p>
-
-<b>
-Дополнительная информация, o браке
+	Дополнительная информация:
 </b>
 <p>
-<textarea rows="10" cols="75" name = rod[mama][suprug][dop]>
-</textarea>
-<p>
-
-<b>
-
-	Дополнительные данные о маме
-</b>
-<p>
-	<table border=1>
-	<tr>
-<td>
 Был ли членом партии
-<td>
+&nbsp
+		<input type=radio name = rod[mama][dop][part][yes] value=1  > 
+	да
+&nbsp
+		<input type=radio name = rod[mama][dop][part][yes] value=0 > 
+	нет
+&nbsp
+		<input type=radio name = rod[mama][dop][part][yes] value=2 > 
+	неизвестно
+
+<p>
 Был ли в эвакуации
-<td>
+&nbsp
+<input type=radio name = rod[mama][dop][evac][yes] value=1  onclick="e_s('mama');" > 
+&nbsp
+	да
+		<input type=radio name = rod[mama][dop][evac][yes] value=0  onclick="no_e_s('mama');" > 
+&nbsp
+	нет
+		<input type=radio name = rod[mama][dop][evac][yes] value=2  onclick="no_e_s('mama');" > 
+	неизвестно
+<p>
+
 Был ли на фронте
-	<tr>
-<td>
-		<input type=radio name = rod[mama][suprug][part][yes] value=1  > 
 &nbsp
+		<input type=radio name = rod[mama][dop][front][yes] value=1  onclick="f_s('mama');"  > 
 	да
-	<p>
-		<input type=radio name = rod[mama][suprug][part][yes] value=0 > 
 &nbsp
+		<input type=radio name = rod[mama][dop][front][yes] value=0  onclick="no_f_s('mama');" > 
 	нет
-	<p>
-		<input type=radio name = rod[mama][suprug][part][yes] value=2 > 
 &nbsp
+		<input type=radio name = rod[mama][dop][front][yes] value=2 onclick="no_f_s('mama');" > 
 	неизвестно
 
-<td>
-		<input type=radio name = rod[mama][suprug][evac][yes] value=1  onclick="e_s('mama');" > 
-&nbsp
-	да
-	<p>
-		<input type=radio name = rod[mama][suprug][evac][yes] value=0  onclick="no_e_s('mama');" > 
-&nbsp
-	нет
-	<p>
-		<input type=radio name = rod[mama][suprug][evac][yes] value=2  onclick="no_e_s('mama');" > 
-&nbsp
-	неизвестно
 
-		<div class = evac_s_mama id = evac_s_mama></div>
+<p>
+	<button  type="button" onclick="ftc('dop_inf.php?type=rod[mama]', 'dop_inf_mama');">
+		добавить дополнительную информацию, которая
+		может быть полезна в генеалогическом поиске
+	</button>
 
-<td>
-		<input type=radio name = rod[mama][suprug][front][yes] value=1  onclick="f_s('mama');"  > 
-&nbsp
-	да
-	<p>
-		<input type=radio name = rod[mama][suprug][front][yes] value=0  onclick="no_f_s('mama');" > 
-&nbsp
-	нет
-	<p>
-		<input type=radio name = rod[mama][suprug][front][yes] value=2 onclick="no_f_s('mama');" > 
-&nbsp
-	неизвестно
-
-		<div class = front_s_mama id = front_s_mama></div>
-
-
-</table>
+		<div class = dop_inf id = dop_inf_mama></div>
 <p>
 <b>
+Информация об учебе, работе, проживании:
+<p>
 МЕСТА УЧЕБЫ
 </b>
 <p>
@@ -218,14 +130,6 @@
 <div class = add_uch_mama0 id = add_uch_mama0 ></div>
 
 <button  type="button" onclick="add_uch('mama');">добавить еще одно место учебы</button>
-
-<p>
-<b>
-Дополнительная информация, o местаx учебы
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[mama][rabota][dop]>
-</textarea>
 
 <p>
 <b>
@@ -257,14 +161,6 @@
 <div class = add_rab_mama0 id = add_rab_mama0 ></div>
 
 <button  type="button" onclick="add_rab('mama');">добавить еще одно место работы</button>
-
-<p>
-<b>
-Дополнительная информация, o местаx работы
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[mama][rabota][dop]>
-</textarea>
 
 <p>
 
@@ -316,15 +212,6 @@
 <p>
 
 <b>
-Дополнительная информация, o местаx проживания
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[mama][adres][dop]>
-</textarea>
-
-<p>
-
-<b>
 Братья или Сестры
 </b>
 <p>
@@ -363,23 +250,13 @@
 
 <p>
 <b>
-Дополнительная информация, o братьяx или сестрax
+	Комментарий или дополнительная информация, которая может
+быть полезна в генеалогическом исследовании:
 </b>
 <p>
-<textarea rows="10" cols="75" name = rod[mama][brat][dop]>
+<textarea rows="10" cols="75" name = rod[mama][dop][issled]>
 </textarea>
 
 <p>
-
-<b>
-Дополнительная информация, o маме
-</b>
-<p>
-<textarea rows="10" cols="75" name = rod[mama][dop][value]>
-</textarea>
-<p>
-
-
-
 <div id = tmp>
 
