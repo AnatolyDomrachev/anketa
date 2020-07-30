@@ -14,73 +14,15 @@
 <form enctype="multipart/form-data" method=post action=add.php>
 	Ваши инициалы&nbsp<input type=text name = info[inicialy]>
 	<p>
-	Добавить другие варианты ФИО
+	<button  type="button" onclick="ftc('drug_inic.html', 'drug_inic');">
+	Добавить другие варианты инициалов 
+	</button>
+	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
+		<div class = drug_inic id = drug_inic></div>
 	<p>
-	
-
-<table>
-
-	<tr>
-	<td>
-	девичья фамилия
-	<input id="id_dev_fam" type=checkbox name = dev_fam onchange = "f_rod('dev_fam');"> 
-	&nbsp
-	<td>
-	смена фамилии
-	<input id="id_smena_fam" type=checkbox name = smena_fam  onchange = "f_rod('smena_fam');"> 
-	&nbsp
-	<td>
-	/имени
-	<input id="id_smena_ima" type=checkbox name = smena_ima  onchange = "f_rod('smena_ima');"> 
-	&nbsp
-	<td>
-	/отчества
-	<input id="id_smena_otc" type=checkbox name = smena_otc  onchange = "f_rod('smena_otc');"> 
-	&nbsp
-	<td>
-	русификация еврейских фамилии
-	<input id="id_rus_fam" type=checkbox name = rus_fam  onchange = "f_rod('rus_fam');"> 
-	&nbsp
-	<td>
-	/имени
-	<input id="id_rus_ima" type=checkbox name = rus_ima  onchange = "f_rod('rus_ima');"> 
-	&nbsp
-	<td>
-	/отчества
-	<input id="id_rus_otc" type=checkbox name = rus_otc  onchange = "f_rod('rus_otc');"> 
-	<td>
-
-</table>
-		<div class = dev_fam id = dev_fam></div>
-
-		<div class = smena_fam id = smena_fam></div>
-		<div class = smena_ima id = smena_ima></div>
-		<div class = smena_otc id = smena_otc></div>
-
-		<div class = rus_fam id = rus_fam></div>
-		<div class = rus_ima id = rus_ima></div>
-		<div class = rus_otc id = rus_otc></div>
-
-
-</table>
-
-<p>
-
 
 	Дата рождения&nbsp<input type=text name = info[data_r]><p>
 	Место рождения&nbsp<input type=text name = info[mesto_r]><p>
-	Супруг/а
-		&nbsp<input type=radio name = info[suprug] value=1 onclick="s();" > да
-		&nbsp<input type=radio name = info[suprug] value=0 onclick="no_s();" > нет
-		<br>
-
-		<div class = suprug id = suprug></div>
-		<!-- Если да, то Инициалы, дата Брака, место брака, дата рождения, место рождения, есть ли еврейские корни да/нет<br> --!>
-	 	Есть ли еврейские корни
-		&nbsp<input type=radio name = info[korni] value=1  onclick="f_korni();" > да
-		&nbsp<input type=radio name = info[korni] value=0  onclick="no_f_korni();" > нет
-		<p>
-
 		<b>Дополнительная информация:</b><p>
 	Партийный да/нет
 		&nbsp<input type=radio name = info[part] value=1 > да
@@ -97,6 +39,35 @@
 		<div class = front id = front></div>
 		<p>
 
+	<button  type="button" onclick="ftc('dop_inf.html', 'dop_inf');">
+		добавить дополнительную информацию, которая может быть полезна в генеалогическом поиске
+	</button>
+		<div class = dop_inf id = dop_inf></div>
+	<p>
+есть ли супруг/а
+		&nbsp
+		<input type=radio name = info[suprug][r] value=1 onclick="ftc('suprug.html', 'suprug');" > да
+		&nbsp
+		<input type=radio name = info[suprug][r] value=0 onclick="ftc('null.html', 'suprug');" > нет
+	<p>
+		<div class = suprug id = suprug></div>
+	<p>
+
+<b>
+Укажите, по какой линии у вас еврейские корни:
+</b>
+
+<p>
+ </div>
+ <table>
+ <tr>
+ <td>
+ по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_rod(\'mat_lin\');">
+&nbsp <td>
+ по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_rod(\'otc_lin\');">
+&nbsp<td>
+ по обеим линиям &nbsp<input id="id_obe_lin" type=radio name = korni  onclick = "f_obe();">
+ </table>
 <!-- 
     Вместо: Укажите родственников по еврейской линии - Укажите, по какой линии еврейские корни: по материнской линии, по отцовской линии, по обеим линиям. 
 						    --!>
@@ -118,14 +89,6 @@
 		<div class = drugoe id = drugoe></div>
 
 <p>
-<b>
-Дополнительная информация, которая может быть полезна в генеалогическом исследовании
-</b>
-<p>
-<textarea rows="10" cols="75" name = info[dop][issled]>
-</textarea>
-<p>
-
 <input type=submit value = Отпправить>
 </form>
 
