@@ -14,7 +14,7 @@
 <form enctype="multipart/form-data" method=post action=add.php>
 	Ваши инициалы&nbsp<input type=text name = info[inicialy]>
 	<p>
-	<button  type="button" onclick="ftc('drug_inic.html', 'drug_inic');">
+	<button  type="button" onclick="ftc('drug_inic.php?type=info', 'drug_inic');">
 	Добавить другие варианты инициалов 
 	</button>
 	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
@@ -123,10 +123,9 @@ function f_obe_lin()
 		ftc('null.html' , 'blocks_mat');
 		ftc('null.html' , 'blocks_otc');
 
-		for(i=0; i<9; i++)
+		for(i=2; i<=8; i++)
 		{
-			var i2 = i+1;
-			var block = 'block_obe_' + i2;
+			var block = 'block_obe_' + i;
 			console.log(block);
 			ftc(block+'.html', block);
 		}
