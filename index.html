@@ -14,7 +14,7 @@
 
 	ftc('block_1.php', 'block_1');
 
-	function ftc(fname, id)
+function ftc(fname, id)
 {
         console.log('fname');
         console.log(fname);
@@ -39,18 +39,6 @@
     });
 }
 
-var arr = new Map([
-  ['mama', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['papa', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['ded_m', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['ded_p', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['bab_m', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['bab_p', {i:0,j:0,k:0,l:0,pred_brak:0}],
-  ['prabab_m', {i:0,j:0,k:0,l:0,pred_brak:0}],
-]);  
-
- var fn = 0;
-
 function f_obe_lin()
 	{
 		ftc('rod_head.html' , 'rod_head');
@@ -72,6 +60,7 @@ function f_obe_lin()
 		ftc('add_uch.php?type=mama&nuch=0', 'add_uch_mama');
 		ftc('add_adr.php?type=mama&nadr=0', 'add_adr_mama');
 		ftc('add_bra.php?type=mama&nbra=0', 'add_bra_mama');
+		ftc('add_brak.php?type=papa&num=0', 'add_brak_papa');
 	}
 
 function f_otc_lin()
