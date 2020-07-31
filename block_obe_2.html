@@ -111,156 +111,26 @@
 <b>
 РАБОТA
 </b>
-<p>
-Период работы                                
-&nbsp
-<input type=text name = rod[mama][rabota][0][period]>
-&nbsp
-&nbsp
-Должность
-&nbsp
-<input type=text name = rod[mama][rabota][0][dolzhnost]>
-<p>
-Название предприятия (учреждения, организации)
-<table>
-<tr>
-<td>
-<input type=text name = rod[mama][rabota][0][mesto] size = 50>
-<td>
-<input type=checkbox name = rod[mama][rabota][0][netochno]>
-неточная
-<br>
-информация
-</table>
-<p>
-
-<div class = add_rab_mama0 id = add_rab_mama0 >
-
-<button  type="button" onclick="ftc('add_rab.php?type=mama&nrab=1', 'add_rab_mama0');">
-	добавить еще одно место работы
-</button>
-
+<div class = add_rab_mama id = add_rab_mama >
 </div>
-
 <p>
 <b>
 УЧЕБA
 </b>
-<p>
-<table border = 1>
-<tr>
-<td>
-Период учебы     
-<td>
-Название учебного заведения
-<td>
-Не точно
-<tr>
-<td>
-<input type=text name = rod[mama][ucheba][0][period]>
-<td>
-<textarea name = rod[mama][ucheba][0][mesto]></textarea>
-<td>
-<input type=checkbox name = rod[mama][ucheba][0][netochno]>
-</table>
-<p>
-
-<div class = add_uch_mama0 id = add_uch_mama0 >
-<button  type="button" onclick="ftc('add_uch.php?type=mama&nuch=1', 'add_uch_mama0');">
-	добавить еще одно место учебы
-</button>
+<div class = add_uch_mama id = add_uch_mama >
 </div>
-
 <p>
-
 <b>
 ПРОЖИВАНИЕ
 </b>
-<p>
-<table border = 1>
-<tr>
-<td>
-Город
-<td>
-район
-<td>
-улица
-<td>
-дом
-<td>
-корпус
-<td>
-квартира
-<td>
-период
-<td>
-Не точно
-<tr>
-<td>
-<input type=text name = rod[mama][adres][0][gorod]>
-<td>
-<input type=text  name = rod[mama][adres][0][raion]>
-<td>
-<input type=text name = rod[mama][adres][0][ulica]>
-<td>
-<input type=text name = rod[mama][adres][0][dom]>
-<td>
-<input type=text name = rod[mama][adres][0][korpus]>
-<td>
-<input type=text name = rod[mama][adres][0][kv]>
-<td>
-<input type=text name = rod[mama][adres][0][period]>
-<td>
-<input type=checkbox name = rod[mama][adres][0][netochno]>
-</table>
-<p>
-
-<div class = add_adr_mama0 id = add_adr_mama0 >
-<button  type="button" onclick="ftc('add_adr.php?type=mama&nadr=1', 'add_adr_mama0');">
-	добавить еще одно место проживания
-</button>
+<div class = add_adr_mama id = add_adr_mama >
 </div>
 <p>
-
 <b>
 Братья или Сестры
 </b>
-<p>
-<table border = 1>
-<tr>
-<td>
-ФИО
-<td>
-жив
-<td>
-дата рождения
-<td>
-место рождения
-<tr>
-<td>
-<input type=text name = rod[mama][brat][0][fio]>
-<td>
-	<input type=radio name = rod[mama][brat][0][live] value=1  > 
-&nbsp
-	да
-&nbsp
-		<input type=radio name = rod[mama][brat][0][live] value=0 > 
-&nbsp
-	нет
-
-<td>
-<input type=text name = rod[mama][brat][0][data_r]>
-<td>
-<input type=text name = rod[mama][brat][0][mesto_r]>
-</table>
-<p>
-
-<div class = add_bra_mama0 id = add_bra_mama0 >
-<button  type="button" onclick="ftc('add_bra.php?type=mama&nbra=1', 'add_bra_mama0');">
-	добавить еще брата/сестру
-</button>
+<div class = add_bra_mama id = add_bra_mama >
 </div>
-
 <p>
 <b>
 	Комментарий или дополнительная информация, которая может

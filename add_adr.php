@@ -22,7 +22,8 @@ $id = 'add_adr_'.$rod.$nadr;
 <td>
 период
 <td>
-Не точно
+неточная
+информация
 <tr>
 <td>
 <input type=text name = rod[mama][adres][<?php echo $nadr; ?>][gorod]>
@@ -44,6 +45,7 @@ $id = 'add_adr_'.$rod.$nadr;
 </div>
 
 <div class = add_adr_mama<?php echo $nadr; ?> id = add_adr_mama<?php echo $nadr; ?> >
+<p>
 <button  type="button" onclick="ftc('add_adr.php?type=<?php echo $rod; ?>&nadr=<?php echo $nadr+1; ?>', '<?php echo $id; ?>');">
 	добавить еще одно место проживания
 </button>

@@ -12,7 +12,8 @@ $id = 'add_uch_'.$rod.$nuch;
 <td>
 Название учебного заведения
 <td>
-Не точно
+неточная
+информация
 <tr>
 <td>
 <input type=text name = rod[mama][ucheba][<?php echo $nuch; ?>][period]>
@@ -26,6 +27,7 @@ $id = 'add_uch_'.$rod.$nuch;
 </div>
 
 <div class = add_uch_mama<?php echo $nuch; ?> id = add_uch_mama<?php echo $nuch; ?> >
+<p>
 <button  type="button" onclick="ftc('add_uch.php?type=<?php echo $rod; ?>&nuch=<?php echo $nuch+1; ?>', '<?php echo $id; ?>');">
 	добавить еще одно место учебы
 </button>
