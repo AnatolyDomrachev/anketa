@@ -1,12 +1,7 @@
 <?php 
-static $nrab = 0;
-$nrab2 = $nrab+1;
+$nrab = $_GET['nrab'];;
 $rod = $_GET['type'];
-$s = 'add_rab_'+$rod+$nrab;
-$id = 'add_rab_'+$rod+$nrab2;
-
-print_r($_GET);
-print_r($rod);
+$id = 'add_rab_'.$rod.$nrab;
 ?>
 
 <p>
@@ -23,7 +18,7 @@ print_r($rod);
 <table>
 <tr>
 <td>
-<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][mesto] size = 5<?php echo $nrab; ?>>
+<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][mesto] size = 50>
 <td>
 <input type=checkbox name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][netochno]>
 неточная
@@ -34,7 +29,7 @@ print_r($rod);
 </div>
 <div class = "<?php echo $id; ?>" id = "<?php echo $id; ?>" >
 
-<?php 
-$nrab++;
-?>
+<button  type="button" onclick="ftc('add_rab.php?type=<?php echo $rod; ?>&nrab=<?php echo $nrab+1; ?>', '<?php echo $id; ?>');">
+	добавить еще одно место работы
+</button>
 
