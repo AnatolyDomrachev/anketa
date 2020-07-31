@@ -105,8 +105,46 @@
 <p>
 <b>
 Информация об учебе, работе, проживании:
+</b>
+
 <p>
-МЕСТА УЧЕБЫ
+<b>
+РАБОТA
+</b>
+<p>
+Период работы                                
+&nbsp
+<input type=text name = rod[mama][rabota][0][period]>
+&nbsp
+&nbsp
+Должность
+&nbsp
+<input type=text name = rod[mama][rabota][0][dolzhnost]>
+<p>
+Название предприятия (учреждения, организации)
+<table>
+<tr>
+<td>
+<input type=text name = rod[mama][rabota][0][mesto] size = 50>
+<td>
+<input type=checkbox name = rod[mama][rabota][0][netochno]>
+неточная
+<br>
+информация
+</table>
+<p>
+
+<div class = add_rab_mama0 id = add_rab_mama0 >
+</div>
+
+<button  type="button" onclick="ftc('add_rab.php?type=mama', 'add_rab_mama');">
+	добавить еще одно место работы
+</button>
+
+
+<p>
+<b>
+УЧЕБA
 </b>
 <p>
 <table border = 1>
@@ -131,41 +169,11 @@
 
 <button  type="button" onclick="add_uch('mama');">добавить еще одно место учебы</button>
 
-<p>
-<b>
-МЕСТА РАБОТЫ
-</b>
-<p>
-<table border = 1>
-<tr>
-<td>
-Период работы                                
-<td>
-Должность
-<td>
-Название предприятия <br>(учреждения, организации)
-<td>
-Не точно
-<tr>
-<td>
-<input type=text name = rod[mama][rabota][0][period]>
-<td>
-<textarea name = rod[mama][rabota][0][dolzhnost]></textarea>
-<td>
-<textarea name = rod[mama][rabota][0][mesto]></textarea>
-<td>
-<input type=checkbox name = rod[mama][rabota][0][netochno]>
-</table>
-<p>
-
-<div class = add_rab_mama0 id = add_rab_mama0 ></div>
-
-<button  type="button" onclick="add_rab('mama');">добавить еще одно место работы</button>
 
 <p>
 
 <b>
-МЕСТА ПРОЖИВАНИЯ
+ПРОЖИВАНИЕ
 </b>
 <p>
 <table border = 1>

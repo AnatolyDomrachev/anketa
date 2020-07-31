@@ -225,6 +225,8 @@ function f_mat_lin()
 
 	function ftc(fname, id)
 {
+        console.log('fname');
+        console.log(fname);
 	fetch(fname)
     .then(function (response) {
         switch (response.status) {
