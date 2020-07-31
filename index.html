@@ -56,6 +56,11 @@ function f_obe_lin()
 			ftc(block+'.html', block);
 		}
 
+		f_add_all();
+	}
+
+function f_add_all()
+	{
 		ftc('add_rab.php?type=mama&nrab=0', 'add_rab_mama');
 		ftc('add_uch.php?type=mama&nuch=0', 'add_uch_mama');
 		ftc('add_adr.php?type=mama&nadr=0', 'add_adr_mama');
@@ -118,6 +123,8 @@ function f_otc_lin()
 			ftc(block+'.html', block);
 			}
 		);
+
+		f_add_all();
 	}
 
 
@@ -137,6 +144,8 @@ function f_mat_lin()
 			ftc(block+'.html', block);
 			}
 		);
+
+		f_add_all();
 	}
 
 
