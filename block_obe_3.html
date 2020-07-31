@@ -1,1 +1,148 @@
-<h2>block_obe_3</h2>
+</div>
+		<p>
+		<h2>Информация о папе</h2>
+		<p>
+		Фамилия, Имя, Отчество
+<input type=text name = rod[papa][fio][value]>
+
+	<p>
+	<button  type="button" onclick="ftc('drug_inic.php?type=rod[papa]', 'drug_inic_papa');">
+	Добавить другие варианты инициалов 
+	</button>
+	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
+		<div class = drug_inic id = drug_inic_papa></div>
+	<p>
+
+Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
+
+<table>
+<tr>
+<td>
+<td>
+<td>
+<b>Неточная<br> информация</b>
+<tr>
+<td>
+Дата рождения               
+<td>
+<input type=text name = rod[papa][data_r][value]>
+<td>
+<input type=checkbox name = rod[papa][data_r][netochno]>
+<tr>
+<td>
+Место рождения 
+<td>
+<input type=text name = rod[papa][mesto_r][value]>
+<td>
+<input type=checkbox name = rod[papa][mesto_r][netochno]>
+</table>
+
+<p>
+	&nbsp<input type=radio name = rod[papa][live] value=1  onclick= "
+		ftc('jiv.php?type=papa&word=папой' , 'jiv_papa'); 
+		ftc('null.html' , 'die_papa');
+	" >
+	жив	
+	&nbsp<input type=radio name = rod[papa][live] value=0  onclick= "
+		ftc('die.php?type=papa&word=папой' , 'die_papa'); 
+		ftc('null.html' , 'jiv_papa');
+	" >
+	мертв
+<p>
+
+<div class = die_papa id = die_papa></div>
+<div class = jiv_papa id = jiv_papa></div>
+
+<p>
+Сведения о браке:
+<div class = brak_papa id = brak_papa >
+<p>
+
+<b>
+	Дополнительная информация:
+</b>
+<p>
+Был ли членом партии
+&nbsp
+		<input type=radio name = rod[papa][dop][part][yes] value=1  > 
+	да
+&nbsp
+		<input type=radio name = rod[papa][dop][part][yes] value=0 > 
+	нет
+&nbsp
+		<input type=radio name = rod[papa][dop][part][yes] value=2 > 
+	неизвестно
+
+<p>
+Был ли в эвакуации
+&nbsp
+<input type=radio name = rod[papa][dop][evac][yes] value=1  onclick="e_s('papa');" > 
+&nbsp
+	да
+		<input type=radio name = rod[papa][dop][evac][yes] value=0  onclick="no_e_s('papa');" > 
+&nbsp
+	нет
+		<input type=radio name = rod[papa][dop][evac][yes] value=2  onclick="no_e_s('papa');" > 
+	неизвестно
+<p>
+
+Был ли на фронте
+&nbsp
+		<input type=radio name = rod[papa][dop][front][yes] value=1  onclick="f_s('papa');"  > 
+	да
+&nbsp
+		<input type=radio name = rod[papa][dop][front][yes] value=0  onclick="no_f_s('papa');" > 
+	нет
+&nbsp
+		<input type=radio name = rod[papa][dop][front][yes] value=2 onclick="no_f_s('papa');" > 
+	неизвестно
+
+
+<p>
+	<button  type="button" onclick="ftc('dop_inf.php?type=rod[papa]', 'dop_inf_papa');">
+		добавить дополнительную информацию, которая
+		может быть полезна в генеалогическом поиске
+	</button>
+
+		<div class = dop_inf id = dop_inf_papa></div>
+<p>
+<b>
+Информация об учебе, работе, проживании:
+</b>
+
+<p>
+<b>
+РАБОТA
+</b>
+<div class = add_rab_papa id = add_rab_papa >
+</div>
+<p>
+<b>
+УЧЕБA
+</b>
+<div class = add_uch_papa id = add_uch_papa >
+</div>
+<p>
+<b>
+ПРОЖИВАНИЕ
+</b>
+<div class = add_adr_papa id = add_adr_papa >
+</div>
+<p>
+<b>
+Братья или Сестры
+</b>
+<div class = add_bra_papa id = add_bra_papa >
+</div>
+<p>
+<b>
+	Комментарий или дополнительная информация, которая может
+быть полезна в генеалогическом исследовании:
+</b>
+<p>
+<textarea rows="10" cols="75" name = rod[papa][dop][issled]>
+</textarea>
+
+<p>
+<div id = tmp>
+
