@@ -16,17 +16,17 @@ $id = 'add_uch_'.$rod.$nuch;
 информация
 <tr>
 <td>
-<input type=text name = rod[mama][ucheba][<?php echo $nuch; ?>][period]>
+<input type=text name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][period]>
 <td>
-<textarea name = rod[mama][ucheba][<?php echo $nuch; ?>][mesto]></textarea>
+<textarea name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][mesto]></textarea>
 <td>
-<input type=checkbox name = rod[mama][ucheba][<?php echo $nuch; ?>][netochno]>
+<input type=checkbox name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][netochno]>
 </table>
 <p>
 
 </div>
 
-<div class = add_uch_mama<?php echo $nuch; ?> id = add_uch_mama<?php echo $nuch; ?> >
+<div class = add_uch_<?php echo $rod; ?><?php echo $nuch; ?> id = add_uch_<?php echo $rod; ?><?php echo $nuch; ?> >
 <p>
 <button  type="button" onclick="ftc('add_uch.php?type=<?php echo $rod; ?>&nuch=<?php echo $nuch+1; ?>', '<?php echo $id; ?>');">
 	добавить еще одно место учебы
