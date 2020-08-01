@@ -49,7 +49,7 @@ function f_obe_lin()
 		ftc('null.html' , 'blocks_mat');
 		ftc('null.html' , 'blocks_otc');
 
-		for(i=2; i<=9; i++)
+		for(i=2; i<=11; i++)
 		{
 			var block = 'block_obe_' + i;
 			console.log(block);
@@ -94,17 +94,29 @@ function f_add_all()
 		ftc('add_adr.php?type=ded_p&nadr=0', 'add_adr_ded_p');
 		ftc('add_bra.php?type=ded_p&nbra=0', 'add_bra_ded_p');
 
-		ftc('add_brak.php?type=pra_m_m&num=0', 'add_brak_pra_m_m');
+		ftc('add_brak_pra.php?type=pra_m_m&num=0', 'add_brak_pra_m_m');
 		ftc('add_rab.php?type=pra_m_m&nrab=0', 'add_rab_pra_m_m');
 		ftc('add_uch.php?type=pra_m_m&nuch=0', 'add_uch_pra_m_m');
 		ftc('add_adr.php?type=pra_m_m&nadr=0', 'add_adr_pra_m_m');
 		ftc('add_bra.php?type=pra_m_m&nbra=0', 'add_bra_pra_m_m');
 
-		ftc('add_brak.php?type=pra_p_m&num=0', 'add_brak_pra_p_m');
+		ftc('add_brak_pra.php?type=pra_p_m&num=0', 'add_brak_pra_p_m');
 		ftc('add_rab.php?type=pra_p_m&nrab=0', 'add_rab_pra_p_m');
 		ftc('add_uch.php?type=pra_p_m&nuch=0', 'add_uch_pra_p_m');
 		ftc('add_adr.php?type=pra_p_m&nadr=0', 'add_adr_pra_p_m');
 		ftc('add_bra.php?type=pra_p_m&nbra=0', 'add_bra_pra_p_m');
+
+		ftc('add_brak_pra.php?type=pra_m_m&num=0', 'add_brak_pra_m_m');
+		ftc('add_rab.php?type=pra_m_m&nrab=0', 'add_rab_pra_m_m');
+		ftc('add_uch.php?type=pra_m_m&nuch=0', 'add_uch_pra_m_m');
+		ftc('add_adr.php?type=pra_m_m&nadr=0', 'add_adr_pra_m_m');
+		ftc('add_bra.php?type=pra_m_m&nbra=0', 'add_bra_pra_m_m');
+
+		ftc('add_brak_pra.php?type=pra_m_p&num=0', 'add_brak_pra_m_p');
+		ftc('add_rab.php?type=pra_m_p&nrab=0', 'add_rab_pra_m_p');
+		ftc('add_uch.php?type=pra_m_p&nuch=0', 'add_uch_pra_m_p');
+		ftc('add_adr.php?type=pra_m_p&nadr=0', 'add_adr_pra_m_p');
+		ftc('add_bra.php?type=pra_m_p&nbra=0', 'add_bra_pra_m_p');
 	}
 
 function f_otc_lin()
