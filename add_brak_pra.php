@@ -37,12 +37,11 @@ $id = 'add_brak_'.$rod.$num;
 <tr>
 <td>
 </table>
-<?php endif; ?>
 
 </div>
 <div class = "<?php echo $id; ?>" id = "<?php echo $id; ?>" >
 
-<button  type="button" onclick="ftc('add_brak.php?type=<?php echo $rod; ?>&num=<?php echo $num+1; ?>', '<?php echo $id; ?>');">
+<button  type="button" onclick="ftc('add_brak_pra.php?type=<?php echo $rod; ?>&num=<?php echo $num+1; ?>', '<?php echo $id; ?>');">
 	добавить сведения о предыдущих браках
 </button>
 
