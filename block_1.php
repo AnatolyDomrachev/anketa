@@ -66,6 +66,12 @@
 		<div class = blocks id = blocks_mat></div>
 		<div class = blocks id = blocks_otc></div>
 		<div class = blocks id = blocks_obe></div>
+<p>
+<b>
+Прикрепите фото/сканы документов, имеющихся у вас или ваших ближайших родственников в наличии
+</b>
+
+		<div class = add_file id = add_file></div>
 
 <input type=submit value = Отпправить>
 </form>
