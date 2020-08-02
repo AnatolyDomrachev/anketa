@@ -61,8 +61,15 @@ function f_obe_lin()
 		f_add_all();
 	}
 
+function sleep(n){
+	var request = new XMLHttpRequest();
+	request.open('GET', 'sleep.php?n=' + n, false);  // `false` makes the request synchronous
+	request.send(null);
+}
+
 function f_add_all()
 	{
+		sleep(1);
 		ftc('add_rab.php?type=mama&nrab=0', 'add_rab_mama');
 		ftc('add_uch.php?type=mama&nuch=0', 'add_uch_mama');
 		ftc('add_adr.php?type=mama&nadr=0', 'add_adr_mama');
@@ -104,6 +111,7 @@ function f_add_all()
 
 function f_add_pra()
 	{
+		sleep(1);
 		ftc('add_brak_pra.php?type=mama_bab_m&num=0', 'add_brak_mama_bab_m');
 		ftc('add_rab.php?type=mama_bab_m&nrab=0', 'add_rab_mama_bab_m');
 		ftc('add_uch.php?type=mama_bab_m&nuch=0', 'add_uch_mama_bab_m');
@@ -146,6 +154,7 @@ function f_otc_lin()
 			}
 		);
 
+		sleep(1);
 		f_add_all();
 	}
 
@@ -167,6 +176,7 @@ function f_mat_lin()
 			}
 		);
 
+		sleep(1);
 		f_add_all();
 	}
 
