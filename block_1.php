@@ -3,47 +3,62 @@
 <p>
 <i>
 <div class = head>
-<b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
+<b>
+Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.
+<p>
+</b>
 	</div>
 <p>
 <div class = inic>
 <form enctype="multipart/form-data" method=post action=add.php>
-	Ваши инициалы&nbsp<input type=text name = info[inicialy]>
+<b>
+	Ваши инициалы
+</b>
+<input type=text name = info[inicialy]>
 	<p>
-	<button  type="button" onclick="ftc('drug_inic.php?type=info', 'drug_inic');">
-	Добавить другие варианты инициалов 
-	</button>
-	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
+	</i>
+	<a href = "javascript:ftc('drug_inic.php?type=info', 'drug_inic');">
+	+ДОБАВИТЬ ДРУГИЕ ВАРИАНТЫ ИНИЦИАЛОВ (НАПРИМЕР: ДЕВИЧЬЯ ФАМИЛИЯ, СМЕНА 
+	<br>
+	ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА, РУСИФИКАЦИЯ ЕВРЕЙСКИХ ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА)
+	</a>
+	<i>
 	</div>
 		<div class = drug_inic id = drug_inic></div>
 
-	Дата рождения&nbsp<input type=text name = info[data_r]><p>
-	Место рождения&nbsp<input type=text name = info[mesto_r]><p>
+<div class = head>
+	Дата рождения<input type=text name = info[data_r]><p>
+	Место рождения<input type=text name = info[mesto_r]><p>
+</div>
+<div class = inic>
 		<b>Дополнительная информация:</b><p>
+</div>
+<div class = l3>
 	Партийный да/нет
-		&nbsp<input type=radio name = info[part] value=1 > да
-		&nbsp<input type=radio name = info[part] value=0 > нет
+		<input type=radio name = info[part] value=1 > да
+		<input type=radio name = info[part] value=0 > нет
 		<p>
 	Был ли в эвакуации 
-		&nbsp<input type=radio name = info[evac] value=1 > да
-		&nbsp<input type=radio name = info[evac] value=0 > нет
+		<input type=radio name = info[evac] value=1 > да
+		<input type=radio name = info[evac] value=0 > нет
 		<div class = evac id = evac></div>
 	<p>
 	Был ли на фронте да/нет 
-		&nbsp<input type=radio name = info[front] value=1 > да
-		&nbsp<input type=radio name = info[front] value=0 > нет
+		<input type=radio name = info[front] value=1 > да
+		<input type=radio name = info[front] value=0 > нет
 		<div class = front id = front></div>
 		<p>
 
 	<button  type="button" onclick="ftc('dop_inf.html', 'dop_inf');">
 		добавить дополнительную информацию, которая может быть полезна в генеалогическом поиске
 	</button>
+</div>
 		<div class = dop_inf id = dop_inf></div>
 	<p>
 есть ли супруг/а
-		&nbsp
+		
 		<input type=radio name = info[suprug][r] value=1 onclick="ftc('suprug.html', 'suprug');" > да
-		&nbsp
+		
 		<input type=radio name = info[suprug][r] value=0 onclick="ftc('null.html', 'suprug');" > нет
 	<p>
 		<div class = suprug id = suprug></div>
@@ -59,10 +74,10 @@
  <tr>
  <td>
  по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_mat_lin();">
-&nbsp <td>
+ <td>
  по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_otc_lin();">
-&nbsp<td>
- по обеим линиям &nbsp<input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
+<td>
+ по обеим линиям <input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
  </table>
 
 
