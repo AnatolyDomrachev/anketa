@@ -15,7 +15,7 @@
 td {
   font-family: antiqua; 
    }
-
+input {outline:none;border: none;}
   </style>
 
 <?php 
@@ -24,27 +24,28 @@ $rod = $_GET['type'];
 $id = 'add_uch_'.$rod.$nuch;
 ?>
 
-<p>
+<b>
 Проверка
+</b>
+<p>
 <table >
-<tr>
-<td>
-<td>
-<td>
-неточная
-информация
 <tr>
 <td>
 Период учебы     
 <td class="la">
 <input type=text name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][period]>
 <td rowspan="2" align = center>
-<input type=checkbox name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][netochno]>
 <tr>
 <td>
 Название учебного заведения
 <td class="la">
 <input name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][mesto]>
+<tr>
+<td>
+неточная
+информация
+<td>
+<input type=checkbox name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][netochno]>
 <!--
 <td>
 неточная
