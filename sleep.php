@@ -1,2 +1,2 @@
-<?php sleep($_GET['n']);
+<?php usleep($_GET['n']*10);
 
