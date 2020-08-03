@@ -14,6 +14,18 @@
 echo "<pre>";
 print_r($_POST);
 
+$filename = "base.txt";
+file_put_contents ( $filename , json_encode($_POST));
+?>
+
+<h2>
+JSON
+</h2>
+
+<?php
+$data = json_decode(file_get_contents ( $filename ), true);
+print_r($data);
+
 ?>
 
 <h2>
