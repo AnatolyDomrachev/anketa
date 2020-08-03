@@ -1,4 +1,3 @@
-<i>
 
  <style>
    @font-face {
@@ -10,9 +9,11 @@
 	border-bottom: 1px solid ; /* Линия внизу ячейки */
    }
 
+/*
    P {
   font-family: antiqua; 
    }
+/*
 
 td {
   font-family: antiqua; 
@@ -25,7 +26,9 @@ $nuch = $_GET['nuch'];;
 $rod = $_GET['type'];
 $id = 'add_uch_'.$rod.$nuch;
 ?>
-
+<i>
+Проверка
+<b>
 Проверка
 <p>
 <table >
@@ -36,6 +39,7 @@ $id = 'add_uch_'.$rod.$nuch;
 <i>
 неточная
 <br>
+<i>
 информация
 <tr>
 <td>

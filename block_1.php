@@ -1,8 +1,12 @@
 
 <h2>Анкета генеалогического исследования</h2>
 <p>
+<i>
+<div class = head>
 <b>Мы собираем информацию о вашей родословной для решения вопроса вашего права на репатриацию в Израиль.<br> Информация обрабатывается нашими сотрудниками и не подлежит передачи третьим лицам.<p></b>
-
+	</div>
+<p>
+<div class = inic>
 <form enctype="multipart/form-data" method=post action=add.php>
 	Ваши инициалы&nbsp<input type=text name = info[inicialy]>
 	<p>
@@ -10,8 +14,8 @@
 	Добавить другие варианты инициалов 
 	</button>
 	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
+	</div>
 		<div class = drug_inic id = drug_inic></div>
-	<p>
 
 	Дата рождения&nbsp<input type=text name = info[data_r]><p>
 	Место рождения&nbsp<input type=text name = info[mesto_r]><p>

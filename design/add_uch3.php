@@ -1,7 +1,8 @@
+
  <style>
    @font-face {
-    font-family: antiqua; /* Имя шрифта */
-    src: url(Antiqua.ttf); /* Путь к файлу со шрифтом */
+    font-family: OpenSans; /* Имя шрифта */
+    src: url(../../fonts/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом */
    }
 
 .la {
@@ -9,13 +10,13 @@
    }
 
    P {
-  font-family: antiqua; 
+  font-family: OpenSans; 
    }
 
 td {
-  font-family: antiqua; 
+  font-family: OpenSans; 
    }
-
+input {outline:none;border: none;}
   </style>
 
 <?php 
@@ -24,26 +25,27 @@ $rod = $_GET['type'];
 $id = 'add_uch_'.$rod.$nuch;
 ?>
 
-<p>
 Проверка
+<p>
 <table >
 <tr>
 <td>
 <td>
 <td>
 неточная
+<br>
 информация
 <tr>
 <td>
 Период учебы     
-<td>
+<td class="la">
 <input type=text name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][period]>
-<td rowspan="2" align = center>
+<td align = center>
 <input type=checkbox name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][netochno]>
 <tr>
 <td>
 Название учебного заведения
-<td>
+<td class="la">
 <input name = rod[<?php echo $rod; ?>][ucheba][<?php echo $nuch; ?>][mesto]>
 <!--
 <td>
