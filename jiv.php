@@ -2,8 +2,11 @@
 <table>
 <tr>
  <td>
- Есть ли связь с <?php echo $_GET['word'] ?> <td>
- <input type=text name = rod[<?php echo $_GET['type'] ?>][sviaz][value]>
+ Есть ли связь с <?php echo $_GET['word'] ?> ?
+<td>
+да
+ <input type=radio name = rod[<?php echo $_GET['type'] ?>][sviaz] value = 1 >
  <td>
- <input type=checkbox name = rod[<?php echo $_GET['type'] ?>][sviaz][netochno]>
+нет
+ <input type=radio name = rod[<?php echo $_GET['type'] ?>][sviaz] value = 1 >
  </table>

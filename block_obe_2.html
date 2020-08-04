@@ -40,23 +40,28 @@
 </table>
 
 <div class = p5>
-	&nbsp<input type=radio name = rod[mama][live] value=1  onclick= "
+	<table>
+	<tr>
+	<td>
+		<input type=radio name = rod[mama][live] value=1  onclick= "
 		ftc('jiv.php?type=mama&word=мамой' , 'jiv_mama'); 
 		ftc('null.html' , 'die_mama');
 	" >
 	живa	
-	&nbsp<input type=radio name = rod[mama][live] value=0  onclick= "
+	<td><input type=radio name = rod[mama][live] value=0  onclick= "
 		ftc('die.php?type=mama&word=мамой' , 'die_mama'); 
 		ftc('null.html' , 'jiv_mama');
 	" >
 	мертвa
+	</table>
 
 <div class = die_mama id = die_mama></div>
 <div class = jiv_mama id = jiv_mama></div>
 
 </div>
-<p>
 
+<<div class = t10>
+<p>
 <b>
 	Дополнительная информация:
 </b>
@@ -102,7 +107,7 @@
 
 </table>
 
-<p>
+		</div>
 		<a  href="javascript:ftc('dop_inf.php?type=rod[mama]', 'dop_inf_mama');">
 		+ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
 <br>		
@@ -115,8 +120,7 @@
 <b>
 Информация об учебе, работе, проживании:
 </b>
-		<div class = p5>
-<p>
+		<div class = p10>
 <b>
 РАБОТA
 </b>
@@ -135,7 +139,6 @@
 <div class = add_adr_mama id = add_adr_mama >
 </div>
 <p>
-		</div>
 <b>
 		<div class = p0>
 		Информация о кровных родственниках:
