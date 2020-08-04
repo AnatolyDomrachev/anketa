@@ -5,42 +5,32 @@ $id = 'add_adr_'.$rod.$nadr;
 ?>
 
 <p>
-<table border = 1>
+<table >
 <tr>
 <td>
 Город
-<td>
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][gorod] style="width: 200px;">
 район
-<td>
-улица
-<td>
-дом
-<td>
-корпус
-<td>
-квартира
-<td>
-период
-<td>
+<input type=text  name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][raion] style="width: 200px;">
+<td rowspan="3">
+<input type=checkbox name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][netochno]>
 неточная
+<br>
 информация
 <tr>
 <td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][gorod]>
+улица
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][ulica]  style="width: 180px;">
+дом
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][dom] style="width: 50px;">
+корпус
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][korpus] style="width: 50px;">
+квартира
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][kv] style="width: 50px;">
+<tr>
 <td>
-<input type=text  name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][raion]>
-<td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][ulica]>
-<td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][dom]>
-<td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][korpus]>
-<td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][kv]>
-<td>
-<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][period]>
-<td>
-<input type=checkbox name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][netochno]>
+период проживания
+<input type=text name = rod[<?php echo $rod; ?>][adres][<?php echo $nadr; ?>][period] style="width: 200px;">
 </table>
 </div>
 

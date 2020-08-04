@@ -31,7 +31,8 @@ $id = 'add_rab_'.$rod.$nrab;
 </div>
 <div class = "<?php echo $id; ?>" id = "<?php echo $id; ?>" >
 
-<button  type="button" onclick="ftc('add_rab.php?type=<?php echo $rod; ?>&nrab=<?php echo $nrab+1; ?>', '<?php echo $id; ?>');">
-	добавить еще одно место работы
-</button>
+		<a  href="javascript:ftc('add_rab.php?type=<?php echo $rod; ?>&nrab=<?php echo $nrab+1; ?>', '<?php echo $id; ?>');">
++ДОБАВИТЬ ЕЩЕ ОДНО МЕСТО РАБОТЫ
+	</a>
+
 
