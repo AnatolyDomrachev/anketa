@@ -4,26 +4,28 @@ $rod = $_GET['type'];
 $id = 'add_rab_'.$rod.$nrab;
 ?>
 
-<p>
-Период работы                                
-&nbsp
-<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][period]>
-&nbsp
-&nbsp
-Должность
-&nbsp
-<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][dolzhnost]>
-<p>
-Название предприятия (учреждения, организации)
 <table>
 <tr>
 <td>
-<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][mesto] size = 50>
+Период работы                                
+<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][period] size = 10 style="width: 200px;">
 <td>
+Должность
+<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][dolzhnost]  size = 10 style="width: 200px;">
+</table>
+<table>
+<tr>
+<td>
+Название предприятия (учреждения, организации)
+<td rowspan="2">
 <input type=checkbox name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][netochno]>
 неточная
 <br>
 информация
+
+<tr>
+<td>
+<input type=text name = rod[<?php echo $rod; ?>][rabota][<?php echo $nrab; ?>][mesto] size = 50>
 </table>
 <p>
 </div>
