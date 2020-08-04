@@ -9,7 +9,6 @@
 </b>
 	</div>
 <p>
-<div class = inic>
 <form enctype="multipart/form-data" method=post action=add.php>
 <b>
 	Ваши инициалы
@@ -23,53 +22,69 @@
 	ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА, РУСИФИКАЦИЯ ЕВРЕЙСКИХ ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА)
 	</a>
 	<i>
-	</div>
 		<div class = drug_inic id = drug_inic></div>
 
-<div class = head>
+<div class = dr1>
 	Дата рождения<input type=text name = info[data_r]><p>
 	Место рождения<input type=text name = info[mesto_r]><p>
 </div>
-<div class = inic>
+<div class = p5>
 		<b>Дополнительная информация:</b><p>
 </div>
-<div class = l3>
-	Партийный да/нет
+<div class = p10>
+<table>
+<tr>
+<td>
+был ли членом партии
+<td>
 		<input type=radio name = info[part] value=1 > да
+<td>
 		<input type=radio name = info[part] value=0 > нет
-		<p>
-	Был ли в эвакуации 
+<td>
+		<input type=radio name = info[part] value=2 > неизвестно
+<tr>
+<td>
+был ли в эвакуации
+<td>
 		<input type=radio name = info[evac] value=1 > да
+<td>
 		<input type=radio name = info[evac] value=0 > нет
-		<div class = evac id = evac></div>
-	<p>
-	Был ли на фронте да/нет 
+<td>
+		<input type=radio name = info[evac] value=2 > неизвестно
+<tr>
+<td>
+был ли на фронте
+<td>
 		<input type=radio name = info[front] value=1 > да
+<td>
 		<input type=radio name = info[front] value=0 > нет
-		<div class = front id = front></div>
-		<p>
+<td>
+		<input type=radio name = info[front] value=2 > неизвестно
 
-	<button  type="button" onclick="ftc('dop_inf.html', 'dop_inf');">
-		добавить дополнительную информацию, которая может быть полезна в генеалогическом поиске
-	</button>
+</table>
+	<a  href="javascript:ftc('dop_inf.html', 'dop_inf');">
+		ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
+<br>		
+ МОЖЕТ БЫТЬ ПОЛЕЗНА В ГЕНЕАЛОГИЧЕСКОМ ПОИСКЕ
+	</a>
 </div>
 		<div class = dop_inf id = dop_inf></div>
 	<p>
+		<div class = p0 >
 есть ли супруг/а
 		
 		<input type=radio name = info[suprug][r] value=1 onclick="ftc('suprug.html', 'suprug');" > да
 		
 		<input type=radio name = info[suprug][r] value=0 onclick="ftc('null.html', 'suprug');" > нет
+</div>
 	<p>
-		<div class = suprug id = suprug></div>
+		<div class = p5 id = suprug></div>
 	<p>
 
+<div class = p0 >
 <b>
 Укажите, по какой линии у вас еврейские корни:
 </b>
-
-<p>
- </div>
  <table>
  <tr>
  <td>
@@ -85,7 +100,6 @@
 		<div class = blocks id = blocks_mat></div>
 		<div class = blocks id = blocks_otc></div>
 		<div class = blocks id = blocks_obe></div>
-<p>
 <b>
 Прикрепите фото/сканы документов, имеющихся у вас или ваших ближайших родственников в наличии
 </b>
@@ -96,5 +110,4 @@
 </form>
 
 </div>
-<div>
 
