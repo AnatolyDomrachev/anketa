@@ -1,3 +1,4 @@
+<div class = p00 >
 
 <h2>Анкета генеалогического исследования</h2>
 <p>
@@ -62,8 +63,8 @@
 		<input type=radio name = info[front] value=2 > неизвестно
 
 </table>
-	<a  href="javascript:ftc('dop_inf.html', 'dop_inf');">
-		ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
+	<a  href="javascript:ftc('dop_inf.php?type=info', 'dop_inf');">
+		+ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
 <br>		
  МОЖЕТ БЫТЬ ПОЛЕЗНА В ГЕНЕАЛОГИЧЕСКОМ ПОИСКЕ
 	</a>
@@ -82,32 +83,34 @@
 	<p>
 
 <div class = p0 >
-<b>
-Укажите, по какой линии у вас еврейские корни:
-</b>
- <table>
- <tr>
- <td>
- по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_mat_lin();">
- <td>
- по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_otc_lin();">
-<td>
- по обеим линиям <input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
- </table>
+	<b>
+	Укажите, по какой линии у вас еврейские корни:
+	</b>
+	 <table>
+	 <tr>
+	 <td>
+	 по материнской линии <input id="id_mat_lin" type= radio name = korni  onclick = "f_mat_lin();">
+	 <td>
+	 по отцовской линии <input id="id_otc_lin" type=radio name = korni  onclick = "f_otc_lin();">
+	<td>
+	 по обеим линиям <input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
+	 </table>
 
 
-		<div class = rod_head id = rod_head></div>
-		<div class = blocks id = blocks_mat></div>
-		<div class = blocks id = blocks_otc></div>
-		<div class = blocks id = blocks_obe></div>
-<b>
-Прикрепите фото/сканы документов, имеющихся у вас или ваших ближайших родственников в наличии
-</b>
+			<div class = rod_head id = rod_head></div>
+			<div class = blocks id = blocks_mat></div>
+			<div class = blocks id = blocks_otc></div>
+			<div class = blocks id = blocks_obe></div>
+	<b>
+	Прикрепите фото/сканы документов, имеющихся у вас или ваших ближайших родственников в наличии
+	</b>
 
-		<div class = add_file id = add_file></div>
+			<div class = add_file id = add_file></div>
 
-<input type=submit value = Отпправить>
-</form>
+	<input type=submit value = Отпправить>
+	</form>
+
+</div>
 
 </div>
 
