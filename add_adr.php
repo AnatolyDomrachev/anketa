@@ -36,6 +36,8 @@ $id = 'add_adr_'.$rod.$nadr;
 
 <div class = add_adr_<?php echo $rod; ?><?php echo $nadr; ?> id = add_adr_<?php echo $rod; ?><?php echo $nadr; ?> >
 <p>
-<button  type="button" onclick="ftc('add_adr.php?type=<?php echo $rod; ?>&nadr=<?php echo $nadr+1; ?>', '<?php echo $id; ?>');">
-	добавить еще одно место проживания
-</button>
+		<a  href="javascript:ftc('add_adr.php?type=<?php echo $rod; ?>&nadr=<?php echo $nadr+1; ?>', '<?php echo $id; ?>');">
++ДОБАВИТЬ ЕЩЕ ОДНО МЕСТО ПРОЖИВАНИЯ
+	</a>
+
+
