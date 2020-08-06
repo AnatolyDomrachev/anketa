@@ -76,10 +76,10 @@ $id = 'add_brak_'.$rod.$num;
 </table>
 <?php endif; ?>
 
-</div>
 <div class = "<?php echo $id; ?>" id = "<?php echo $id; ?>" >
 		<a  href="javascript:ftc('add_brak.php?type=<?php echo $rod; ?>&num=<?php echo $num+1; ?>', '<?php echo $id; ?>');">
 	+ДОБАВИТЬ СВЕДЕНИЯ О ПРЕДЫДУЩИХ БРАКАХ
 	</a>
 
+</div>
 

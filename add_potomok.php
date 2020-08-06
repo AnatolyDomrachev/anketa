@@ -1,7 +1,7 @@
 <?php 
 $word = $_GET['word'];;
 $rod = $_GET['type'];
-$id = 'mama_'.$rod;
+$id = 'add_potomok_'.$rod;
 ?>
 
 <p>
@@ -26,7 +26,4 @@ $id = 'mama_'.$rod;
 
 <p>
 
-
-</div>
-<div id = "tmp" >
 
