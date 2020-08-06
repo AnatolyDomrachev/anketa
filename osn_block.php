@@ -5,14 +5,20 @@ $pol = $_GET['pol'];
 if($pol == "w")
 {
 	$dev_fam = "ДЕВИЧЬЯ ФАМИЛИЯ, ";
-	$byl = "Была";
+	$jiv = "Жива";
+	$mertv = "Мертва";
 }
-else
+
+if($pol == "m")
+{
 	$dev_fam = "";
+	$jiv = "Жив";
+	$mertv = "Мёртв";
+}
 ?>
 
 <p>
-		<h2>Информация о маме</h2>
+		<h2>Информация о <?php echo $dp; ?></h2>
 		<p>
 		Фамилия, Имя, Отчество
 <input type=text name = rod[<?php echo $rod; ?>][fio][value]>
@@ -61,12 +67,12 @@ else
 		ftc('jiv.php?type=<?php echo $rod; ?>&word=<?php echo $dp; ?>' , 'jiv_<?php echo $rod; ?>'); 
 		ftc('null.html' , 'die_<?php echo $rod; ?>');
 	" >
-	живa	
+	<?php echo $jiv; ?>	
 	<td><input type=radio name = rod[<?php echo $rod; ?>][live] value=0  onclick= "
 		ftc('die.php?type=<?php echo $rod; ?>&word=<?php echo $dp; ?>' , 'die_<?php echo $rod; ?>'); 
 		ftc('null.html' , 'jiv_<?php echo $rod; ?>');
 	" >
-	мертвa
+	<?php echo $mertv; ?>
 	</table>
 
 <div class = die_<?php echo $rod; ?> id = die_<?php echo $rod; ?>></div>

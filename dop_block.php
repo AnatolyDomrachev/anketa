@@ -1,7 +1,14 @@
 <?php 
 $rod = $_GET['type'];
 $dp = $_GET['dp'];
-$byl = $_GET['byl'];
+$pol = $_GET['pol'];
+
+if($pol == "w")
+	$byl = "Была";
+
+if($pol == "m")
+	$byl = "Был";
+
 ?>
 
 <b>

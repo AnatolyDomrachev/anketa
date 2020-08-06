@@ -189,9 +189,13 @@ function sleep(n){
 function f_add_all()
 	{
 		sleep(1);
+		ftc('osn_block.php?type=papa&dp=папе&pol=m', 'osn_block_papa');
+		ftc('dop_block.php?type=papa&pol=m', 'dop_block_papa');
+		ftc('dop_inf_0.php?type=papa&byl=Была', 'dop_inf_papa');
 
-		ftc('osn_block.php?type=mama&dp=мамой&pol=w', 'osn_block_mama');
-		ftc('dop_block.php?type=mama&byl=Была', 'dop_block_mama');
+
+		ftc('osn_block.php?type=mama&dp=маме&pol=w', 'osn_block_mama');
+		ftc('dop_block.php?type=mama&pol=w', 'dop_block_mama');
 		ftc('dop_inf_0.php?type=mama&byl=Была', 'dop_inf_mama');
 
 		ftc('add_rab.php?type=mama&nrab=0', 'add_rab_mama');
