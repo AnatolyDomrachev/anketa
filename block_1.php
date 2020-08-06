@@ -17,13 +17,15 @@
 <input type=text name = info[inicialy]>
 	<p>
 	</i>
+
+		<div class = drug_inic id = drug_inic>
 	<a href = "javascript:ftc('drug_inic.php?type=info', 'drug_inic');">
 	+ДОБАВИТЬ ДРУГИЕ ВАРИАНТЫ ИНИЦИАЛОВ (НАПРИМЕР: ДЕВИЧЬЯ ФАМИЛИЯ, СМЕНА 
 	<br>
 	ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА, РУСИФИКАЦИЯ ЕВРЕЙСКИХ ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА)
 	</a>
 	<i>
-		<div class = drug_inic id = drug_inic></div>
+</div>
 
 <div class = dr1>
 	Дата рождения<input type=text name = info[data_r]><p>
@@ -63,13 +65,15 @@
 		<input type=radio name = info[front] value=2 > неизвестно
 
 </table>
+</div>
+
+		<div class = dop_inf id = dop_inf>
 	<a  href="javascript:ftc('dop_inf.php?type=info', 'dop_inf');">
 		+ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
 <br>		
  МОЖЕТ БЫТЬ ПОЛЕЗНА В ГЕНЕАЛОГИЧЕСКОМ ПОИСКЕ
 	</a>
 </div>
-		<div class = dop_inf id = dop_inf></div>
 	<p>
 		<div class = p0 >
 есть ли супруг/а
