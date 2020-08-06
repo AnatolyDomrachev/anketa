@@ -1,9 +1,14 @@
 <?php 
 $rod = $_GET['type'];
 $dp = $_GET['dp'];
-$byl = $_GET['byl'];
+$pol = $_GET['pol'];
 if($pol == "w")
+{
 	$dev_fam = "ДЕВИЧЬЯ ФАМИЛИЯ, ";
+	$byl = "Была";
+}
+else
+	$dev_fam = "";
 ?>
 
 <p>
