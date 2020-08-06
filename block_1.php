@@ -99,12 +99,14 @@
 	<td>
 	 по обеим линиям <input id="id_obe_lin" type=radio name = korni  onclick = "f_obe_lin();">
 	 </table>
+</div>
 
 
 			<div class = rod_head id = rod_head></div>
 			<div class = blocks id = blocks_mat></div>
 			<div class = blocks id = blocks_otc></div>
 			<div class = blocks id = blocks_obe></div>
+<div class = p0 >
 	<b>
 	Прикрепите фото/сканы документов, имеющихся у вас или ваших ближайших родственников в наличии
 	</b>
@@ -116,5 +118,4 @@
 
 </div>
 
-</div>
 
