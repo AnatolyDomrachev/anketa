@@ -2,6 +2,8 @@
 $rod = $_GET['type'];
 $dp = $_GET['dp'];
 $byl = $_GET['byl'];
+if($pol == "w")
+	$dev_fam = "ДЕВИЧЬЯ ФАМИЛИЯ, ";
 ?>
 
 <p>
@@ -13,7 +15,7 @@ $byl = $_GET['byl'];
 		<div class = drug_inic id = drug_inic_<?php echo $rod; ?>>
 	<p>
 	<a href = "javascript:ftc('drug_inic.php?type=rod[<?php echo $rod; ?>]', 'drug_inic_<?php echo $rod; ?>');">
-	+ДОБАВИТЬ ДРУГИЕ ВАРИАНТЫ ИНИЦИАЛОВ (НАПРИМЕР: ДЕВИЧЬЯ ФАМИЛИЯ, СМЕНА 
+	+ДОБАВИТЬ ДРУГИЕ ВАРИАНТЫ ИНИЦИАЛОВ (НАПРИМЕР: <?php echo $dev_fam; ?>СМЕНА 
 	<br>
 	ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА, РУСИФИКАЦИЯ ЕВРЕЙСКИХ ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА)
 	</a>
