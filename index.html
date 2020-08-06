@@ -190,7 +190,12 @@ function f_add_all()
 	{
 		sleep(1);
 
-		ftc('osn_block.php?type=ded_m&tp=дедушкой по маме&dp=дедушке по маме&pol=w', 'osn_block_ded_m');
+		ftc('osn_block.php?type=bab_p&tp=бабушкой по папе&dp=бабушке по папе&pol=w', 'osn_block_bab_p');
+		ftc('dop_block.php?type=bab_p&pol=m', 'dop_block_bab_p');
+		ftc('dop_inf_0.php?type=bab_p&byl=Был', 'dop_inf_bab_p');
+		ftc('comment.php?type=bab_p', 'comment_bab_p');
+
+		ftc('osn_block.php?type=ded_m&tp=дедушкой по маме&dp=дедушке по маме&pol=m', 'osn_block_ded_m');
 		ftc('dop_block.php?type=ded_m&pol=m', 'dop_block_ded_m');
 		ftc('dop_inf_0.php?type=ded_m&byl=Был', 'dop_inf_ded_m');
 		ftc('comment.php?type=ded_m', 'comment_ded_m');
