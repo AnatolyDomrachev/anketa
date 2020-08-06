@@ -189,6 +189,11 @@ function sleep(n){
 function f_add_all()
 	{
 		sleep(1);
+
+		ftc('osn_block.php?type=mama&dp=мамой', 'osn_block_mama');
+		ftc('dop_block.php?type=mama&byl=Была', 'dop_block_mama');
+		ftc('dop_inf_0.php?type=mama&byl=Была', 'dop_inf_mama');
+
 		ftc('add_rab.php?type=mama&nrab=0', 'add_rab_mama');
 		ftc('add_uch.php?type=mama&nuch=0', 'add_uch_mama');
 		ftc('add_adr.php?type=mama&nadr=0', 'add_adr_mama');
