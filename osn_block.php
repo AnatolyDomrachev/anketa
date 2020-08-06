@@ -1,6 +1,7 @@
 <?php 
 $rod = $_GET['type'];
 $dp = $_GET['dp'];
+$tp = $_GET['tp'];
 $pol = $_GET['pol'];
 if($pol == "w")
 {
@@ -64,7 +65,7 @@ if($pol == "m")
 	<tr>
 	<td>
 		<input type=radio name = rod[<?php echo $rod; ?>][live] value=1  onclick= "
-		ftc('jiv.php?type=<?php echo $rod; ?>&word=<?php echo $dp; ?>' , 'jiv_<?php echo $rod; ?>'); 
+		ftc('jiv.php?type=<?php echo $rod; ?>&word=<?php echo $tp; ?>' , 'jiv_<?php echo $rod; ?>'); 
 		ftc('null.html' , 'die_<?php echo $rod; ?>');
 	" >
 	<?php echo $jiv; ?>	
