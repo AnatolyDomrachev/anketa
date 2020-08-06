@@ -190,6 +190,11 @@ function f_add_all()
 	{
 		sleep(1);
 
+		ftc('osn_block.php?type=ded_m&tp=дедушкой по маме&dp=дедушке по маме&pol=w', 'osn_block_ded_m');
+		ftc('dop_block.php?type=ded_m&pol=m', 'dop_block_ded_m');
+		ftc('dop_inf_0.php?type=ded_m&byl=Был', 'dop_inf_ded_m');
+		ftc('comment.php?type=ded_m', 'comment_ded_m');
+
 		ftc('osn_block.php?type=bab_m&tp=бабушкой по маме&dp=бабушке по маме&pol=w', 'osn_block_bab_m');
 		ftc('dop_block.php?type=bab_m&pol=w', 'dop_block_bab_m');
 		ftc('dop_inf_0.php?type=bab_m&byl=Была', 'dop_inf_bab_m');
