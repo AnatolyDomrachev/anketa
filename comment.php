@@ -6,9 +6,5 @@ $rod = $_GET['type'];
 	Комментарий:
 </b>
 <br>
-<input type = text name = rod[<?php echo $rod; ?>][comment][0]  style="width: 700px;">
-<input type = text name = rod[<?php echo $rod; ?>][comment][1] style="width: 700px;">
-<input type = text name = rod[<?php echo $rod; ?>][comment][2] style="width: 700px;">
-
+<textarea rows="2" cols="75" name =  rod[<?php echo $rod; ?>][comment] > </textarea>
 <p>
-

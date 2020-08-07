@@ -109,6 +109,12 @@ input[type=text] {
 	width: 500px;
 }
 
+textarea {
+	outline:none;
+	border: none ;
+	border-bottom: 1px solid ;
+}
+
 td {
 	padding: 5px  20px;
 }
@@ -131,6 +137,20 @@ A {
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" >
 
+	var idNum = 0, data = 'elastic';
+$('body').on('keyup', 'textarea[data^="'+data+'"]', function(){
+if($(this).attr('data')==''+data+''){$(this).attr({style:'overflow:hidden;'+$(this).attr('style')+'',data:''+$(this).attr('data')+''+idNum+''});idNum++;}
+tData = $(this).attr('data');
+if($('div[data="'+tData.replace(''+data+'','clone')+'"]').size()==0){
+attr = 'style="display:none;padding:'+$(this).css('padding')+';width:'+$(this).css('width')+';min-height:'+$(this).css('height')+';font-size:'+$(this).css('font-size')+';line-height:'+$(this).css('line-height')+';font-family:'+$(this).css('font-family')+';white-space:'+$(this).css('white-space')+';word-wrap:'+$(this).css('word-wrap')+';letter-spacing:0.2px;" data="'+tData.replace(''+data+'','clone')+'"';
+clone = '<div '+attr+'>'+$(this).val()+'</div>';
+$('body').prepend(clone);
+idNum++;
+}else{
+$('div[data="'+tData.replace(''+data+'','clone')+'"]').html($(this).val());
+$(this).css('height',''+$('div[data="'+tData.replace(''+data+'','clone')+'"]').css('height')+'');
+}
+});
 
 	ftc('block_1.php', 'block_1');
 	ftc('add_file.php?num=0', 'add_file');
@@ -178,6 +198,7 @@ function f_obe_lin()
 		}
 
 		f_add_all();
+		f_add_all();
 	}
 
 function sleep(n){
@@ -188,7 +209,6 @@ function sleep(n){
 
 function f_add_all()
 	{
-		sleep(1);
 
 		ftc('osn_block.php?type=ded_p&tp=дедушкой по папе&dp=дедушке по папе&pol=m', 'osn_block_ded_p');
 		ftc('dop_block.php?type=ded_p&pol=m', 'dop_block_ded_p');
@@ -212,7 +232,7 @@ function f_add_all()
 
 		ftc('osn_block.php?type=papa&tp=папой&dp=папе&pol=m', 'osn_block_papa');
 		ftc('dop_block.php?type=papa&pol=m', 'dop_block_papa');
-		ftc('dop_inf_0.php?type=papa&byl=Была', 'dop_inf_papa');
+		ftc('dop_inf_0.php?type=papa&byl=Был', 'dop_inf_papa');
 		ftc('comment.php?type=papa', 'comment_papa');
 
 		ftc('osn_block.php?type=mama&tp=мамой&dp=маме&pol=w', 'osn_block_mama');
@@ -328,6 +348,7 @@ function f_otc_lin()
 
 		sleep(1);
 		f_add_all();
+		f_add_all();
 	}
 
 
@@ -349,6 +370,7 @@ function f_mat_lin()
 		);
 
 		sleep(1);
+		f_add_all();
 		f_add_all();
 	}
 

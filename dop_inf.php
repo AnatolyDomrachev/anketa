@@ -1,5 +1,4 @@
 	Дополнительная информация
-	<input type=text name = <?php echo $_GET['type']; ?>[dop][poisk][0] size = 200>
 <br>
-	<input type = text name = <?php echo $_GET['type']; ?>[dop][poisk][1]  style="width: 700px;">
 
+<textarea data = 'elastic' rows="2" cols="75" name = <?php echo $_GET['type']; ?>[dop][poisk][1] > </textarea>
