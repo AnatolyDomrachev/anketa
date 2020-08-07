@@ -263,6 +263,27 @@ function f_add_all()
 function f_add_pra()
 	{
 		sleep(1);
+
+		ftc('osn_block.php?type=mama_ded_p&tp=прабабушкой&dp=прабабушке (маме дедушки по папе)&pol=w', 'osn_block_mama_ded_p');
+		ftc('dop_block.php?type=mama_ded_p&pol=w', 'dop_block_mama_ded_p');
+		ftc('dop_inf_0.php?type=mama_ded_p&byl=Была', 'dop_inf_mama_ded_p');
+		ftc('comment.php?type=mama_ded_p', 'comment_mama_ded_p');
+
+		ftc('osn_block.php?type=mama_ded_m&tp=прабабушкой&dp=прабабушке (маме дедушки по маме)&pol=w', 'osn_block_mama_ded_m');
+		ftc('dop_block.php?type=mama_ded_m&pol=w', 'dop_block_mama_ded_m');
+		ftc('dop_inf_0.php?type=mama_ded_m&byl=Была', 'dop_inf_mama_ded_m');
+		ftc('comment.php?type=mama_ded_m', 'comment_mama_ded_m');
+
+		ftc('osn_block.php?type=mama_bab_p&tp=прабабушкой&dp=прабабушке (маме бабушки по папе)&pol=w', 'osn_block_mama_bab_p');
+		ftc('dop_block.php?type=mama_bab_p&pol=w', 'dop_block_mama_bab_p');
+		ftc('dop_inf_0.php?type=mama_bab_p&byl=Была', 'dop_inf_mama_bab_p');
+		ftc('comment.php?type=mama_bab_p', 'comment_mama_bab_p');
+
+		ftc('osn_block.php?type=mama_bab_m&tp=прабабушкой&dp=прабабушке (маме бабушки по маме)&pol=w', 'osn_block_mama_bab_m');
+		ftc('dop_block.php?type=mama_bab_m&pol=w', 'dop_block_mama_bab_m');
+		ftc('dop_inf_0.php?type=mama_bab_m&byl=Была', 'dop_inf_mama_bab_m');
+		ftc('comment.php?type=mama_bab_m', 'comment_mama_bab_m');
+
 		ftc('add_brak_pra.php?type=mama_bab_m&num=0', 'add_brak_mama_bab_m');
 		ftc('add_rab.php?type=mama_bab_m&nrab=0', 'add_rab_mama_bab_m');
 		ftc('add_uch.php?type=mama_bab_m&nuch=0', 'add_uch_mama_bab_m');
