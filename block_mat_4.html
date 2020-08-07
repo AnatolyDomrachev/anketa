@@ -1,110 +1,7 @@
-</div>
-		<p>
-		<h2>Информация о бабушке по маме</h2>
-		<p>
-		Фамилия, Имя, Отчество
-<input type=text name = rod[bab_m][fio][value]>
-
-	<p>
-	<button  type="button" onclick="ftc('drug_inic.php?type=rod[bab_m]', 'drug_inic_bab_m');">
-	Добавить другие варианты инициалов 
-	</button>
-	(например: девичья фамилия, смена фамилии/имени/отчества, русификация еврейских фамилии/имени/отчества)
-		<div class = drug_inic id = drug_inic_bab_m></div>
-	<p>
-
-Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
-
-<table>
-<tr>
-<td>
-<td>
-<td>
-<b>Неточная<br> информация</b>
-<tr>
-<td>
-Дата рождения               
-<td>
-<input type=text name = rod[bab_m][data_r][value]>
-<td>
-<input type=checkbox name = rod[bab_m][data_r][netochno]>
-<tr>
-<td>
-Место рождения 
-<td>
-<input type=text name = rod[bab_m][mesto_r][value]>
-<td>
-<input type=checkbox name = rod[bab_m][mesto_r][netochno]>
-</table>
-
-<p>
-	&nbsp<input type=radio name = rod[bab_m][live] value=1  onclick= "
-		ftc('jiv.php?type=bab_m&word=мамой' , 'jiv_bab_m'); 
-		ftc('null.html' , 'die_bab_m');
-	" >
-	жив	
-	&nbsp<input type=radio name = rod[bab_m][live] value=0  onclick= "
-		ftc('die.php?type=bab_m&word=мамой' , 'die_bab_m'); 
-		ftc('null.html' , 'jiv_bab_m');
-	" >
-	мертв
-<p>
-
-<div class = die_bab_m id = die_bab_m></div>
-<div class = jiv_bab_m id = jiv_bab_m></div>
-
-<div id = add_potomok_bab_m>
+<div id = osn_block_bab_m></div>
+<div class = p0 id = add_potomok_bab_m>
 	</div>
-<p>
-
-<b>
-	Дополнительная информация:
-</b>
-<p>
-Был ли членом партии
-&nbsp
-		<input type=radio name = rod[bab_m][dop][part][yes] value=1  > 
-	да
-&nbsp
-		<input type=radio name = rod[bab_m][dop][part][yes] value=0 > 
-	нет
-&nbsp
-		<input type=radio name = rod[bab_m][dop][part][yes] value=2 > 
-	неизвестно
-
-<p>
-Был ли в эвакуации
-&nbsp
-<input type=radio name = rod[bab_m][dop][evac][yes] value=1  onclick="e_s('bab_m');" > 
-&nbsp
-	да
-		<input type=radio name = rod[bab_m][dop][evac][yes] value=0  onclick="no_e_s('bab_m');" > 
-&nbsp
-	нет
-		<input type=radio name = rod[bab_m][dop][evac][yes] value=2  onclick="no_e_s('bab_m');" > 
-	неизвестно
-<p>
-
-Был ли на фронте
-&nbsp
-		<input type=radio name = rod[bab_m][dop][front][yes] value=1  onclick="f_s('bab_m');"  > 
-	да
-&nbsp
-		<input type=radio name = rod[bab_m][dop][front][yes] value=0  onclick="no_f_s('bab_m');" > 
-	нет
-&nbsp
-		<input type=radio name = rod[bab_m][dop][front][yes] value=2 onclick="no_f_s('bab_m');" > 
-	неизвестно
-
-
-<p>
-	<button  type="button" onclick="ftc('dop_inf.php?type=rod[bab_m]', 'dop_inf_bab_m');">
-		добавить дополнительную информацию, которая
-		может быть полезна в генеалогическом поиске
-	</button>
-
-		<div class = dop_inf id = dop_inf_bab_m></div>
-<p>
+<div id = dop_block_bab_m></div>
 <b>
 Информация об учебе, работе, проживании:
 </b>
@@ -139,9 +36,5 @@
 быть полезна в генеалогическом исследовании:
 </b>
 <p>
-<textarea rows="10" cols="75" name = rod[bab_m][dop][issled]>
-</textarea>
-
-<p>
-<div id = tmp>
-
+	<div id = comment_bab_m >
+</div>

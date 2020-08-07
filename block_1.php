@@ -1,4 +1,8 @@
-<div class = p00 >
+<?php 
+$rod = "info";
+?>
+
+	<div class = p00 >
 
 <h2>Анкета генеалогического исследования</h2>
 <p>
@@ -49,22 +53,26 @@
 <td>
 был ли в эвакуации
 <td>
-		<input type=radio name = info[evac] value=1 > да
+		<input type=radio name = info[evac] value=1 onclick="ftc('evac.php?type=<?php echo $rod; ?>', 'evac_<?php echo $rod; ?>');" > да
 <td>
-		<input type=radio name = info[evac] value=0 > нет
+		<input type=radio name = info[evac] value=0  onclick="ftc('null.html', 'evac_<?php echo $rod; ?>');"> нет
 <td>
-		<input type=radio name = info[evac] value=2 > неизвестно
+		<input type=radio name = info[evac] value=2  onclick="ftc('null.html', 'evac_<?php echo $rod; ?>');"> неизвестно
+</table>
+<div id = evac_<?php echo $rod; ?> ></div>
+<table>
 <tr>
 <td>
 был ли на фронте
 <td>
-		<input type=radio name = info[front] value=1 > да
+		<input type=radio name = info[front] value=1  onclick="ftc('front.php?type=<?php echo $rod; ?>', 'front_<?php echo $rod; ?>');" > да
 <td>
-		<input type=radio name = info[front] value=0 > нет
+		<input type=radio name = info[front] value=0  onclick="ftc('null.html', 'front_<?php echo $rod; ?>');" > нет
 <td>
-		<input type=radio name = info[front] value=2 > неизвестно
+		<input type=radio name = info[front] value=2  onclick="ftc('null.html', 'front_<?php echo $rod; ?>');" > неизвестно
 
 </table>
+	<div id = front_<?php echo $rod; ?> > </div>
 </div>
 
 		<div class = dop_inf id = dop_inf>
