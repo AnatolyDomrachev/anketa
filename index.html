@@ -227,10 +227,11 @@ function f_obe_lin()
 
 		var i;
 
-		ftc('blocks_obe.html' , 'blocks_obe');
+	//	ftc('blocks_obe.html' , 'blocks_obe');
+		ftc('cache/obe_lin.html' , 'blocks_obe');
 		ftc('null.html' , 'blocks_mat');
 		ftc('null.html' , 'blocks_otc');
-
+/*
 		for(i=2; i<=7; i++)
 		{
 			var block = 'block_obe_' + i;
@@ -240,6 +241,7 @@ function f_obe_lin()
 
 		f_add_all();
 		f_add_all();
+*/
 	}
 
 function sleep(n){
@@ -372,12 +374,13 @@ function f_add_pra()
 
 function f_otc_lin()
 	{
-		ftc('rod_head.html' , 'rod_head');
-		var arr = [3,2,6,7];
-		ftc('blocks_otc.html' , 'blocks_otc');
+	//	ftc('rod_head.html' , 'rod_head');
+	//	var arr = [3,2,6,7];
+	//	ftc('blocks_otc.html' , 'blocks_otc');
+		ftc('cache/otc_lin.html' , 'blocks_otc');
 		ftc('null.html' , 'blocks_mat');
 		ftc('null.html' , 'blocks_obe');
-
+/*
 		arr.forEach(i => 
 			{
 			console.log(i);
@@ -390,17 +393,20 @@ function f_otc_lin()
 		sleep(1);
 		f_add_all();
 		f_add_all();
+*/
 	}
 
 
 function f_mat_lin()
 	{
-		ftc('rod_head.html' , 'rod_head');
-		var arr = [2,3,4,5]
-		ftc('blocks_mat.html' , 'blocks_mat');
+	//	ftc('rod_head.html' , 'rod_head');
+	//	var arr = [2,3,4,5]
+	//	ftc('blocks_mat.html' , 'blocks_mat');
+		ftc('cache/mat_lin.html' , 'blocks_mat');
 		ftc('null.html' , 'blocks_otc');
 		ftc('null.html' , 'blocks_obe');
 
+/*
 		arr.forEach(i => 
 			{
 			console.log(i);
@@ -412,7 +418,7 @@ function f_mat_lin()
 
 		sleep(1);
 		f_add_all();
-		f_add_all();
+	*/	f_add_all();
 	}
 
 
