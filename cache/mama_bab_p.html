@@ -1,0 +1,332 @@
+<p>
+		</p><h2>Информация о прабабушке (маме бабушки по папе)</h2>
+		<p>
+		Фамилия, Имя, Отчество
+<input type="text" name="rod[mama_bab_p][fio][value]">
+	
+		</p><div class="drug_inic" id="drug_inic_mama_bab_p">
+	<p>
+	<a href="javascript:ftc(&#39;drug_inic.php?type=rod[mama_bab_p]&#39;, &#39;drug_inic_mama_bab_p&#39;);">
+	+ДОБАВИТЬ ДРУГИЕ ВАРИАНТЫ ИНИЦИАЛОВ (НАПРИМЕР: ДЕВИЧЬЯ ФАМИЛИЯ, СМЕНА 
+	<br>
+	ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА, РУСИФИКАЦИЯ ЕВРЕЙСКИХ ФАМИЛИИ/ИМЕНИ/ОТЧЕСТВА)
+	</a>
+		</p></div>
+
+	<p>
+	</p><div class="p0">
+Если та или иная информация приблизительная –поставьте галочку «неточная информация»<br>
+
+
+<table>
+<tbody><tr>
+<td>
+</td><td>
+</td><td>
+Неточная<br> информация
+</td></tr><tr>
+<td>
+Дата рождения               
+</td><td>
+<input type="text" name="rod[mama_bab_p][data_r][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][data_r][netochno]">
+</td></tr><tr>
+<td>
+Место рождения 
+</td><td>
+<input type="text" name="rod[mama_bab_p][mesto_r][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][mesto_r][netochno]">
+</td></tr></tbody></table>
+
+<div class="p5">
+	<table>
+	<tbody><tr>
+	<td>
+		<input type="radio" name="rod[mama_bab_p][live]" value="1" onclick="
+		ftc(&#39;jiv.php?type=mama_bab_p&amp;word=прабабушкой&#39; , &#39;jiv_mama_bab_p&#39;); 
+		ftc(&#39;null.html&#39; , &#39;die_mama_bab_p&#39;);
+	">
+	Жива	
+	</td><td><input type="radio" name="rod[mama_bab_p][live]" value="0" onclick="
+		ftc(&#39;die.php?type=mama_bab_p&amp;word=прабабушке (маме бабушки по папе)&#39; , &#39;die_mama_bab_p&#39;); 
+		ftc(&#39;null.html&#39; , &#39;jiv_mama_bab_p&#39;);
+	">
+	Мертва	</td></tr></tbody></table>
+
+<div class="die_mama_bab_p" id="die_mama_bab_p"></div>
+<div class="jiv_mama_bab_p" id="jiv_mama_bab_p"></div>
+
+</div>
+
+<div class="t10">
+
+
+</div></div></div>
+<div class="add_brak_mama_bab_p" id="add_brak_mama_bab_p">
+<p>
+</p><table>
+<tbody><tr>
+<td>
+ФИО супруга
+</td><td>
+<input type="text" name="rod[mama_bab_p][brak][0][fio][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][brak][0][fio][netochno]">
+</td></tr><tr>
+<td>
+Дата заключения брака 
+</td><td>
+<input type="text" name="rod[mama_bab_p][brak][0][data][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][brak][0][data][netochno]">
+</td></tr><tr>
+<td>
+Место заключения брака 
+</td><td>
+<input type="text" name="rod[mama_bab_p][brak][0][mesto][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][brak][0][mesto][netochno]">
+</td></tr><tr>
+<td>
+Дата расторжения брака 
+</td><td>
+<input type="text" name="rod[mama_bab_p][brak][0][data_r][value]">
+</td><td>
+<input type="checkbox" name="rod[mama_bab_p][brak][0][data_r][netochno]">
+</td></tr><tr>
+<td>
+</td></tr></tbody></table>
+
+<div class="add_brak_mama_bab_p0" id="add_brak_mama_bab_p0">
+		<a href="javascript:ftc(&#39;add_brak_pra.php?type=mama_bab_p&amp;num=1&#39;, &#39;add_brak_mama_bab_p0&#39;);">
+	+ДОБАВИТЬ СВЕДЕНИЯ О ПРЕДЫДУЩИХ БРАКАХ
+	</a>
+
+</div></div>
+<div id="dop_block_mama_bab_p">
+<b>
+			Дополнительная информация:
+</b>
+<table>
+<tbody><tr>
+<td>
+Была ли членом партии
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][part][yes]" value="1"> 
+	да
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][part][yes]" value="0"> 
+	нет
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][part][yes]" value="2"> 
+	неизвестно
+
+</td></tr><tr>
+<td>
+Была ли в эвакуации
+</td><td>
+<input type="radio" name="rod[mama_bab_p][dop][evac][yes]" value="1" onclick="ftc(&#39;evac.php?type=mama_bab_p&#39;, &#39;evac_mama_bab_p&#39;);"> 
+	да
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][evac][yes]" value="0" onclick="ftc(&#39;null.html&#39;, &#39;evac_mama_bab_p&#39;);"> 
+	нет
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][evac][yes]" value="2" onclick="ftc(&#39;null.html&#39;, &#39;evac_mama_bab_p&#39;);"> 
+	неизвестно
+</td></tr></tbody></table>
+<div id="evac_mama_bab_p"></div>
+<table>
+<tbody><tr>
+<td>
+
+Была ли на фронте
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][front][yes]" value="1" onclick="ftc(&#39;front.php?type=mama_bab_p&#39;, &#39;front_mama_bab_p&#39;);"> 
+	да
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][front][yes]" value="0" onclick="ftc(&#39;null.html&#39;, &#39;front_mama_bab_p&#39;);"> 
+	нет
+</td><td>
+		<input type="radio" name="rod[mama_bab_p][dop][front][yes]" value="2" onclick="ftc(&#39;null.html&#39;, &#39;front_mama_bab_p&#39;);"> 
+	неизвестно
+
+</td></tr></tbody></table>
+<div id="front_mama_bab_p"> </div>
+
+</div>
+<div class="dop_inf" id="dop_inf_mama_bab_p">
+	<a href="javascript:ftc(&#39;dop_inf.php?type=mama_bab_p&#39;, &#39;dop_inf_mama_bab_p&#39;);">
+		+ДОБАВИТЬ ДОПОЛНИТЕЛЬНУЮ ИНФОРМАЦИЮ, КОТОРАЯ
+<br>		
+ МОЖЕТ БЫТЬ ПОЛЕЗНА В ГЕНЕАЛОГИЧЕСКОМ ПОИСКЕ
+	</a>
+
+</div>
+<div class="p0">
+<b>
+Информация об учебе, работе, проживании:
+</b>
+
+<p>
+<b>
+РАБОТA
+</b>
+</p><div class="add_rab_mama_bab_p" id="add_rab_mama_bab_p">
+<table>
+<tbody><tr>
+<td>
+Период работы                                
+<input type="text" name="rod[mama_bab_p][rabota][0][period]" size="10" style="width: 200px;">
+</td><td>
+Должность
+<input type="text" name="rod[mama_bab_p][rabota][0][dolzhnost]" size="10" style="width: 200px;">
+</td></tr></tbody></table>
+<table>
+<tbody><tr>
+<td>
+Название предприятия (учреждения, организации)
+</td><td rowspan="2">
+<input type="checkbox" name="rod[mama_bab_p][rabota][0][netochno]">
+неточная
+<br>
+информация
+
+</td></tr><tr>
+<td>
+<input type="text" name="rod[mama_bab_p][rabota][0][mesto]" size="50">
+</td></tr></tbody></table>
+<p>
+
+</p><div class="add_rab_mama_bab_p0" id="add_rab_mama_bab_p0">
+
+		<a href="javascript:ftc(&#39;add_rab.php?type=mama_bab_p&amp;nrab=1&#39;, &#39;add_rab_mama_bab_p0&#39;);">
++ДОБАВИТЬ ЕЩЕ ОДНО МЕСТО РАБОТЫ
+	</a>
+
+
+</div></div>
+<p>
+<b>
+УЧЕБA
+</b>
+</p><div class="add_uch_mama_bab_p" id="add_uch_mama_bab_p"><table>
+<tbody><tr>
+<td>
+Период учебы     
+<input type="text" name="rod[mama_bab_p][ucheba][0][period]">
+</td><td rowspan="2">
+<input type="checkbox" name="rod[mama_bab_p][rabota][][netochno]">
+неточная
+<br>
+информация
+</td></tr><tr>
+<td>
+Название учебного заведения
+<input type="text" name="rod[mama_bab_p][ucheba][0][mesto]">
+</td></tr></tbody></table>
+<p>
+
+
+
+</p><div class="add_uch_mama_bab_p0" id="add_uch_mama_bab_p0">
+<p>
+
+		<a href="javascript:ftc(&#39;add_uch.php?type=mama_bab_p&amp;nuch=1&#39;, &#39;add_uch_mama_bab_p0&#39;);">
++ДОБАВИТЬ ЕЩЕ ОДНО МЕСТО УЧЕБЫ
+	</a>
+
+
+</p></div></div>
+<p>
+<b>
+ПРОЖИВАНИЕ
+</b>
+</p><div class="add_adr_mama_bab_p" id="add_adr_mama_bab_p">
+<p>
+</p><table>
+<tbody><tr>
+<td>
+Город
+<input type="text" name="rod[mama_bab_p][adres][0][gorod]" style="width: 200px;">
+район
+<input type="text" name="rod[mama_bab_p][adres][0][raion]" style="width: 200px;">
+</td><td rowspan="3">
+<input type="checkbox" name="rod[mama_bab_p][adres][0][netochno]">
+неточная
+<br>
+информация
+</td></tr><tr>
+<td>
+улица
+<input type="text" name="rod[mama_bab_p][adres][0][ulica]" style="width: 180px;">
+дом
+<input type="text" name="rod[mama_bab_p][adres][0][dom]" style="width: 50px;">
+корпус
+<input type="text" name="rod[mama_bab_p][adres][0][korpus]" style="width: 50px;">
+квартира
+<input type="text" name="rod[mama_bab_p][adres][0][kv]" style="width: 50px;">
+</td></tr><tr>
+<td>
+период проживания
+<input type="text" name="rod[mama_bab_p][adres][0][period]" style="width: 200px;">
+</td></tr></tbody></table>
+
+
+<div class="add_adr_mama_bab_p0" id="add_adr_mama_bab_p0">
+<p>
+		<a href="javascript:ftc(&#39;add_adr.php?type=mama_bab_p&amp;nadr=1&#39;, &#39;add_adr_mama_bab_p0&#39;);">
++ДОБАВИТЬ ЕЩЕ ОДНО МЕСТО ПРОЖИВАНИЯ
+	</a>
+
+
+</p></div></div>
+<p>
+<b>
+Братья или Сестры
+</b>
+</p><div class="add_bra_mama_bab_p" id="add_bra_mama_bab_p">
+<table>
+<tbody><tr>
+<td>
+ФИО
+<input type="text" name="rod[mama_bab_p][brat][0][fio]">
+</td></tr><tr>
+<td>
+дата рождения
+<input type="text" name="rod[mama_bab_p][brat][0][data_r]">
+</td></tr><tr>
+<td>
+место рождения
+<input type="text" name="rod[mama_bab_p][brat][0][mesto_r]">
+</td></tr></tbody></table>
+<table>
+<tbody><tr>
+<td>
+жив
+<input type="radio" name="rod[mama_bab_p][brat][0][live]" value="1"> 
+</td><td>
+	нет
+		<input type="radio" name="rod[mama_bab_p][brat][0][live]" value="0"> 
+
+</td></tr></tbody></table>
+
+
+<div class="add_bra_mama_bab_p0" id="add_bra_mama_bab_p0">
+
+		<a href="javascript:ftc(&#39;add_bra.php?type=mama_bab_p&amp;nbra=1&#39;, &#39;add_bra_mama_bab_p0&#39;);">
++ДОБАВИТЬ ЕЩЕ БРАТА/СЕСТРУ
+	</a>
+
+
+
+</div></div>
+	<div id="comment_mama_bab_p">
+<b>
+	Комментарий:
+</b>
+<br>
+<textarea rows="2" cols="75" name="rod[mama_bab_p][comment]" id="com_mama_bab_p" onkeyup="resizeArea2(&#39;com_mama_bab_p&#39;);"> </textarea>
+</div>
+
